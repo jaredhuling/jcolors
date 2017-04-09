@@ -2,11 +2,10 @@
 output: 
     html_document:
         keep_md: true
-        self_contained: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/")
 ```
 
 # jcolors
@@ -19,8 +18,41 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Install `jcolors` from GitHub:
 
-```r
+```{r, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("jaredhuling/jcolors")
 ```
 
+```{r eval = TRUE, message = FALSE}
+library(jcolors)
+library(ggplot2)
+data(morley)
+
+pltl <- ggplot(data = morley, aes(x = Run, y = Speed,
+group = factor(Expt),
+colour = factor(Expt))) +
+    geom_line(size = 2) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "grey97"),
+          panel.border = element_blank())
+
+pltd <- ggplot(data = morley, aes(x = Run, y = Speed,
+group = factor(Expt),
+colour = factor(Expt))) +
+    geom_line(size = 2) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "grey15"),
+          panel.border = element_blank(),
+          panel.grid.major = element_line(color = "grey45"),
+          panel.grid.minor = element_line(color = "grey25"))
+
+pltl + scale_color_jcolors(palette = "default")
+
+pltd + scale_color_jcolors(palette = "default")
+```
+
+Color palettes can be displayed using `display_jcolors()`
+
+```{r}
+display_jcolors("default")
+```

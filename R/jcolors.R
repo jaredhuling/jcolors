@@ -23,12 +23,38 @@ jcolors <- function(palette = c("default"))
                  'darkorchid1'  = "#BF3EFF", # darkorchid1
                  'yellow'       = "#FFFF00") # yellow
 
+    highlight <- c('highlight' = "yellow")
+
     switch(match.arg(palette),
            default = default,
            highlight = highlight)
 }
 
 
+# display.jcolors
+#' Display jcolors
+#'
+#' Creates different vectors of related colors that may be useful for figures.
+#'
+#' @param palette Character string indicating a palette of colors.
+#' @return Vector of character strings representing the chosen palette of colors.
+#' @export
+#' @importFrom grDevices rgb2hsv
+#' @examples
+display_jcolors <- function(palette = c("default"))
+{
+    palette <- match.arg(palette)
+    jcols   <- jcolors(palette)
+    n       <- length(jcols)
+    cnames  <- names(jcols)
+    image(1:n, 1, as.matrix(1:n),
+          col  = jcols,
+          xlab = "", ylab = "",
+          xaxt = "n", yaxt = "n", bty = "n")
+    text(1:5, par("usr")[1] - 0.025,
+         srt = 45, adj = 0.5,
+         labels = cnames, xpd = TRUE)
+}
 
 
 
