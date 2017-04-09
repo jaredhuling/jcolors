@@ -23,9 +23,21 @@ Install `jcolors` from GitHub:
 devtools::install_github("jaredhuling/jcolors")
 ```
 
+Access the `jcolors` color palettes with `jcolors()`:
+
 ```{r eval = TRUE, message = FALSE, warning = FALSE}
 library(jcolors)
+
+jcolors('default')
+
+```
+
+
+Now use `scale_color_jcolors()` with `ggplot2`:
+
+```{r eval = TRUE, message = FALSE, warning = FALSE}
 library(ggplot2)
+
 data(morley)
 
 pltl <- ggplot(data = morley, aes(x = Run, y = Speed,

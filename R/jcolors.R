@@ -18,8 +18,8 @@
 jcolors <- function(palette = c("default"))
 {
     default <- c('chartreuse3'  = "#66CD00", # chartreuse3
-                 'orangered'    = "#FF4500", # orangered
                  'deepskyblue3' = "#009ACD", # deepskyblue3
+                 'orangered'    = "#FF4500", # orangered
                  'darkorchid1'  = "#BF3EFF", # darkorchid1
                  'yellow'       = "#FFFF00") # yellow
 

@@ -17,10 +17,27 @@ Install `jcolors` from GitHub:
 devtools::install_github("jaredhuling/jcolors")
 ```
 
+Access the `jcolors` color palettes with `jcolors()`:
+
 
 ```r
 library(jcolors)
+
+jcolors('default')
+```
+
+```
+##  chartreuse3 deepskyblue3    orangered  darkorchid1       yellow 
+##    "#66CD00"    "#009ACD"    "#FF4500"    "#BF3EFF"    "#FFFF00"
+```
+
+
+Now use `scale_color_jcolors()` with `ggplot2`:
+
+
+```r
 library(ggplot2)
+
 data(morley)
 
 pltl <- ggplot(data = morley, aes(x = Run, y = Speed,
@@ -44,13 +61,13 @@ colour = factor(Expt))) +
 pltl + scale_color_jcolors(palette = "default")
 ```
 
-![](vignettes/unnamed-chunk-2-1.png)<!-- -->
+![](vignettes/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 pltd + scale_color_jcolors(palette = "default")
 ```
 
-![](vignettes/unnamed-chunk-2-2.png)<!-- -->
+![](vignettes/unnamed-chunk-3-2.png)<!-- -->
 
 Color palettes can be displayed using `display_jcolors()`
 
@@ -59,4 +76,4 @@ Color palettes can be displayed using `display_jcolors()`
 display_jcolors("default")
 ```
 
-![](vignettes/unnamed-chunk-3-1.png)<!-- -->
+![](vignettes/unnamed-chunk-4-1.png)<!-- -->
