@@ -28,8 +28,8 @@ jcolors('default')
 ```
 
 ```
-##  chartreuse3 deepskyblue3    orangered  darkorchid1       yellow 
-##    "#66CD00"    "#009ACD"    "#FF4500"    "#BF3EFF"    "#FFFF00"
+##  chartreuse3 deepskyblue3    orangered  darkorchid4       yellow 
+##    "#66CD00"    "#009ACD"    "#FF4500"    "#9A32CD"    "#FFFF00"
 ```
 
 
