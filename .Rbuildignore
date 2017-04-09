@@ -1,2 +1,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^.*\.Rhistory$
+README.Rmd
+README.html
+README_files
+^\.travis\.yml$
+^/\.gitattributes$
+^notes$
+^cran-comments.md$
