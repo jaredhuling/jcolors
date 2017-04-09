@@ -14,25 +14,32 @@
 #' axis(side=3, at=1:3, c("default", "pal2", "pal3"), las=1)
 #'
 #' def <- jcolors("default")
-#' points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 5)
+#' points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 8)
 #' pal2 <- jcolors("pal2")
-#' points(seq(along = pal2), rep(2, length(pal2)), pch = 22, bg = pal2, cex = 5)
+#' points(seq(along = pal2), rep(2, length(pal2)), pch = 22, bg = pal2, cex = 8)
 #' pal3 <- jcolors("pal3")
-#' points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 5)
+#' points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 8)
 jcolors <- function(palette = c("default",
                                 "pal2",
                                 "pal3"))
 {
-    default <- c('chartreuse3'  = "#66CD00", # chartreuse3
-                 'deepskyblue3' = "#009ACD", # deepskyblue3
-                 'orangered'    = "#FF4500", # orangered
-                 'darkorchid4'  = "#9A32CD", # darkorchid3 (darkorchid4 = #68228B, darkorchi1 = #BF3EFF)
-                 'yellow'       = "#FFFF00") # yellow
+    default <- c('chartreuse3'        = "#66CD00", # chartreuse3
+                 'deepskyblue3'       = "#009ACD", # deepskyblue3
+                 'orangered'          = "#FF4500", # orangered
+                 'darkorchid4'        = "#9A32CD", # darkorchid3 (darkorchid4 = #68228B, darkorchi1 = #BF3EFF)
+                 'titanium_yellow'    = "#F5E400")
+                 ## 'arctic_lime'        = "#CEFF1A")
+                 ## 'mikado_yellow'      = "#FFBE0B")
+                 ## 'ucla_gold'          = "#FFAE03")
+                 ## 'yellow'        = "#FFFF00") # yellow
+
+    ## 'charleston_green' = "#2D2A32"
 
     highlight <- c('highlight' = "yellow")
 
     pal2 <- c('blue_yonder'    = "#3E71A8",
-              'mustard'        = "#FEF735",
+              ## 'mustard'        = "#FEF735",
+              'arctic_lime'    = "#CEFF1A",
               'dark_byzantium' = "#5F3659",
               'vivid_gamboge'  = "#FE9300",
               'tiffany_blue'   = "#0BB19F")

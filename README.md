@@ -28,8 +28,10 @@ jcolors('default')
 ```
 
 ```
-##  chartreuse3 deepskyblue3    orangered  darkorchid4       yellow 
-##    "#66CD00"    "#009ACD"    "#FF4500"    "#9A32CD"    "#FFFF00"
+##     chartreuse3    deepskyblue3       orangered     darkorchid4 
+##       "#66CD00"       "#009ACD"       "#FF4500"       "#9A32CD" 
+## titanium_yellow 
+##       "#F5E400"
 ```
 
 
@@ -38,6 +40,7 @@ Now use `scale_color_jcolors()` with `ggplot2`:
 
 ```r
 library(ggplot2)
+library(gridExtra)
 
 data(morley)
 
@@ -47,7 +50,8 @@ colour = factor(Expt))) +
     geom_line(size = 2) +
     theme_bw() +
     theme(panel.background = element_rect(fill = "grey97"),
-          panel.border = element_blank())
+          panel.border = element_blank(),
+          legend.position = "bottom")
 
 pltd <- ggplot(data = morley, aes(x = Run, y = Speed,
 group = factor(Expt),
@@ -57,30 +61,28 @@ colour = factor(Expt))) +
     theme(panel.background = element_rect(fill = "grey15"),
           panel.border = element_blank(),
           panel.grid.major = element_line(color = "grey45"),
-          panel.grid.minor = element_line(color = "grey25"))
+          panel.grid.minor = element_line(color = "grey25"),
+          legend.position = "bottom")
 
-pltl + scale_color_jcolors(palette = "pal2")
+grid.arrange(pltl + scale_color_jcolors(palette = "default"),
+             pltd + scale_color_jcolors(palette = "default"), ncol = 2)
 ```
 
 ![](vignettes/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
-pltd + scale_color_jcolors(palette = "default")
+grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
+             pltd + scale_color_jcolors(palette = "pal2"), ncol = 2)
 ```
 
 ![](vignettes/unnamed-chunk-3-2.png)<!-- -->
 
 ```r
-pltl + scale_color_jcolors(palette = "pal3")
+grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
+             pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
 ```
 
 ![](vignettes/unnamed-chunk-3-3.png)<!-- -->
-
-```r
-pltd + scale_color_jcolors(palette = "pal3")
-```
-
-![](vignettes/unnamed-chunk-3-4.png)<!-- -->
 
 Color palettes can be displayed using `display_jcolors()`
 
