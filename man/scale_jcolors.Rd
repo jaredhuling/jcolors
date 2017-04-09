@@ -6,11 +6,11 @@
 \alias{scale_fill_jcolors}
 \title{jcolors color scales}
 \usage{
-scale_color_jcolors(palette = c("default", "pal2"), ...)
+scale_color_jcolors(palette = c("default", "pal2", "pal3"), ...)
 
-scale_colour_jcolors(palette = c("default", "pal2"), ...)
+scale_colour_jcolors(palette = c("default", "pal2", "pal3"), ...)
 
-scale_fill_jcolors(palette = c("default", "pal2"), ...)
+scale_fill_jcolors(palette = c("default", "pal2", "pal3"), ...)
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}

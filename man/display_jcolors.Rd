@@ -4,7 +4,7 @@
 \alias{display_jcolors}
 \title{Display jcolors}
 \usage{
-display_jcolors(palette = c("default", "pal2"))
+display_jcolors(palette = c("default", "pal2", "pal3"))
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}

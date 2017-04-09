@@ -4,7 +4,7 @@
 \alias{jcolors}
 \title{Vectors of colors for figures}
 \usage{
-jcolors(palette = c("default", "pal2"))
+jcolors(palette = c("default", "pal2", "pal3"))
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}
@@ -23,5 +23,9 @@ axis(side=2, at=1:2, c("default", "highlight"), las=1)
 
 def <- jcolors("default")
 points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 5)
+grass_in_sun' = "#536D1B",
+cornell_red'        = "#A8201A",
+persian_indigo'     = "#22007C",
+deep_saffron'       = "#F39237"
 }
 

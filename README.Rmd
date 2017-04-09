@@ -62,6 +62,11 @@ colour = factor(Expt))) +
 pltl + scale_color_jcolors(palette = "pal2")
 
 pltd + scale_color_jcolors(palette = "default")
+
+pltl + scale_color_jcolors(palette = "pal3")
+
+pltd + scale_color_jcolors(palette = "pal3")
+
 ```
 
 Color palettes can be displayed using `display_jcolors()`
@@ -75,3 +80,9 @@ display_jcolors("default")
 ```{r}
 display_jcolors("pal2")
 ```
+
+## pal3
+```{r}
+display_jcolors("pal3")
+```
+

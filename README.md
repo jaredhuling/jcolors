@@ -70,6 +70,18 @@ pltd + scale_color_jcolors(palette = "default")
 
 ![](vignettes/unnamed-chunk-3-2.png)<!-- -->
 
+```r
+pltl + scale_color_jcolors(palette = "pal3")
+```
+
+![](vignettes/unnamed-chunk-3-3.png)<!-- -->
+
+```r
+pltd + scale_color_jcolors(palette = "pal3")
+```
+
+![](vignettes/unnamed-chunk-3-4.png)<!-- -->
+
 Color palettes can be displayed using `display_jcolors()`
 
 ## default
@@ -87,3 +99,12 @@ display_jcolors("pal2")
 ```
 
 ![](vignettes/unnamed-chunk-5-1.png)<!-- -->
+
+## pal3
+
+```r
+display_jcolors("pal3")
+```
+
+![](vignettes/unnamed-chunk-6-1.png)<!-- -->
+
