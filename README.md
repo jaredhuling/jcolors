@@ -21,13 +21,6 @@ devtools::install_github("jaredhuling/jcolors")
 ```r
 library(jcolors)
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.3.3
-```
-
-```r
 data(morley)
 
 pltl <- ggplot(data = morley, aes(x = Run, y = Speed,

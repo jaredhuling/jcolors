@@ -23,7 +23,7 @@ Install `jcolors` from GitHub:
 devtools::install_github("jaredhuling/jcolors")
 ```
 
-```{r eval = TRUE, message = FALSE}
+```{r eval = TRUE, message = FALSE, warning = FALSE}
 library(jcolors)
 library(ggplot2)
 data(morley)
