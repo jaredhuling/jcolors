@@ -4,7 +4,7 @@
 \alias{jcolors}
 \title{Vectors of colors for figures}
 \usage{
-jcolors(palette = c("default"))
+jcolors(palette = c("default", "pal2"))
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}

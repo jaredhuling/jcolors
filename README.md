@@ -59,7 +59,7 @@ colour = factor(Expt))) +
           panel.grid.major = element_line(color = "grey45"),
           panel.grid.minor = element_line(color = "grey25"))
 
-pltl + scale_color_jcolors(palette = "default")
+pltl + scale_color_jcolors(palette = "pal2")
 ```
 
 ![](vignettes/unnamed-chunk-3-1.png)<!-- -->
@@ -72,9 +72,18 @@ pltd + scale_color_jcolors(palette = "default")
 
 Color palettes can be displayed using `display_jcolors()`
 
+## default
 
 ```r
 display_jcolors("default")
 ```
 
 ![](vignettes/unnamed-chunk-4-1.png)<!-- -->
+
+## pal2
+
+```r
+display_jcolors("pal2")
+```
+
+![](vignettes/unnamed-chunk-5-1.png)<!-- -->

@@ -15,7 +15,8 @@
 #'
 #' def <- jcolors("default")
 #' points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 5)
-jcolors <- function(palette = c("default"))
+jcolors <- function(palette = c("default",
+                                "pal2"))
 {
     default <- c('chartreuse3'  = "#66CD00", # chartreuse3
                  'deepskyblue3' = "#009ACD", # deepskyblue3
@@ -25,9 +26,15 @@ jcolors <- function(palette = c("default"))
 
     highlight <- c('highlight' = "yellow")
 
+    pal2 <- c('blue_yonder'    = "#3E71A8",
+              'mustard'        = "#FEF735",
+              'dark_byzantium' = "#5F3659",
+              'vivid_gamboge'  = "#FE9300",
+              'tiffany_blue'   = "#0BB19F")
+
     switch(match.arg(palette),
            default = default,
-           highlight = highlight)
+           pal2    = pal2)
 }
 
 
@@ -41,7 +48,8 @@ jcolors <- function(palette = c("default"))
 #' @export
 #' @importFrom grDevices rgb2hsv
 #' @examples
-display_jcolors <- function(palette = c("default"))
+display_jcolors <- function(palette = c("default",
+                                        "pal2"))
 {
     palette <- match.arg(palette)
     jcols   <- jcolors(palette)
@@ -94,7 +102,8 @@ display_jcolors <- function(palette = c("default"))
 #' pltd + scale_color_jcolors(palette = "default")
 #'
 #'
-scale_color_jcolors = function (palette = c("default"),
+scale_color_jcolors = function (palette = c("default",
+                                            "pal2"),
                                 ...)
 {
     palette <- match.arg(palette)
@@ -112,7 +121,8 @@ scale_colour_jcolors = scale_color_jcolors
 #' @export scale_fill_jcolors
 #' @importFrom ggplot2 discrete_scale
 #' @rdname scale_jcolors
-scale_fill_jcolors = function (palette = c("default"),
+scale_fill_jcolors = function (palette = c("default",
+                                           "pal2"),
                                ...)
 {
     palette <- match.arg(palette)
