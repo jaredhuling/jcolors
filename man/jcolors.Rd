@@ -17,15 +17,15 @@ Creates different vectors of related colors that may be useful for figures.
 }
 \examples{
 par(mar=c(0.6,5.1,0.6,0.6))
-plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, 6), ylim = c(3, 0), yaxs = "i",
+plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, 6), ylim = c(4, 0), yaxs = "i",
      xaxt = "n", yaxt = "n", xaxs = "i")
-axis(side=2, at=1:2, c("default", "highlight"), las=1)
+axis(side=3, at=1:3, c("default", "pal2", "pal3"), las=1)
 
 def <- jcolors("default")
 points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 5)
-grass_in_sun' = "#536D1B",
-cornell_red'        = "#A8201A",
-persian_indigo'     = "#22007C",
-deep_saffron'       = "#F39237"
+pal2 <- jcolors("pal2")
+points(seq(along = pal2), rep(2, length(pal2)), pch = 22, bg = pal2, cex = 5)
+pal3 <- jcolors("pal3")
+points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 5)
 }
 

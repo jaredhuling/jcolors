@@ -9,12 +9,16 @@
 #' @importFrom grDevices rgb2hsv
 #' @examples
 #' par(mar=c(0.6,5.1,0.6,0.6))
-#' plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, 6), ylim = c(3, 0), yaxs = "i",
+#' plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, 6), ylim = c(4, 0), yaxs = "i",
 #'      xaxt = "n", yaxt = "n", xaxs = "i")
-#' axis(side=2, at=1:2, c("default", "highlight"), las=1)
+#' axis(side=3, at=1:3, c("default", "pal2", "pal3"), las=1)
 #'
 #' def <- jcolors("default")
 #' points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 5)
+#' pal2 <- jcolors("pal2")
+#' points(seq(along = pal2), rep(2, length(pal2)), pch = 22, bg = pal2, cex = 5)
+#' pal3 <- jcolors("pal3")
+#' points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 5)
 jcolors <- function(palette = c("default",
                                 "pal2",
                                 "pal3"))
@@ -38,17 +42,17 @@ jcolors <- function(palette = c("default",
                  'granite'      = "#CEC3AE",
                  'wood'         = "#5B5121",
                  'shade'        = "#62646C",
-                 #'grass_in_sun' = "#536D1B",
+                 ## 'grass_in_sun' = "#536D1B",
                  'reflection'   = "#D3AB4C")
 
-    pal3 <- c(#'plum'               = "#963484",
+    pal3 <- c(## 'plum'               = "#963484",
               'kelly_green'        = "#29BF12",
               'rich_electric_blue' = "#00A5CF",
-              #'cornell_red'        = "#A8201A",
+              ## 'cornell_red'        = "#A8201A",
               'maximum_red'        = "#DE1A1A",
-              #'persian_indigo'     = "#22007C",
+              ## 'persian_indigo'     = "#22007C",
               'majorelle_blue'     = "#574AE2",
-              #'deep_saffron'       = "#F39237"
+              ## 'deep_saffron'       = "#F39237"
               'fluorescent_orange' = "#FFBF00"
               )
 
@@ -69,6 +73,9 @@ jcolors <- function(palette = c("default",
 #' @return Vector of character strings representing the chosen palette of colors.
 #' @export
 #' @importFrom grDevices rgb2hsv
+#' @importFrom graphics image
+#' @importFrom graphics text
+#' @importFrom graphics par
 #' @examples
 display_jcolors <- function(palette = c("default",
                                         "pal2",
