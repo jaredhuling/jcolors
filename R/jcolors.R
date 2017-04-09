@@ -3,8 +3,8 @@
 #'
 #' Creates different vectors of related colors that may be useful for figures.
 #'
-#' @param set Character string indicating a set of colors.
-#' @return Vector of character strings representing the chosen set of colors.
+#' @param palette Character string indicating a palette of colors.
+#' @return Vector of character strings representing the chosen palette of colors.
 #' @export
 #' @importFrom grDevices rgb2hsv
 #' @examples
@@ -15,7 +15,7 @@
 #'
 #' def <- jcolors("default")
 #' points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 5)
-jcolors <- function(set = c("default"))
+jcolors <- function(palette = c("default"))
 {
     default <- c('chartreuse3'  = "#66CD00", # chartreuse3
                  'orangered'    = "#FF4500", # orangered
@@ -23,7 +23,7 @@ jcolors <- function(set = c("default"))
                  'darkorchid1'  = "#BF3EFF", # darkorchid1
                  'yellow'       = "#FFFF00") # yellow
 
-    switch(match.arg(set),
+    switch(match.arg(palette),
            default = default,
            highlight = highlight)
 }
@@ -32,4 +32,67 @@ jcolors <- function(set = c("default"))
 
 
 
+#' jcolors color scales
+#'
+#' @inheritParams jcolors
+#' @param ... additional parameters for \code{\link[ggplot2]{discrete_scale}}
+#' @export scale_color_jcolors
+#' @importFrom ggplot2 discrete_scale
+#' @importFrom scales manual_pal
+#' @rdname scale_jcolors
+#'
+#' @examples
+#' library(ggplot2)
+#' data(morley)
+#'
+#' pltl <- ggplot(data = morley, aes(x = Run, y = Speed,
+#' group = factor(Expt),
+#' colour = factor(Expt))) +
+#'     geom_line(size = 2) +
+#'     theme_bw() +
+#'     theme(panel.background = element_rect(fill = "grey97"),
+#'           panel.border = element_blank())
+#'
+#' pltd <- ggplot(data = morley, aes(x = Run, y = Speed,
+#' group = factor(Expt),
+#' colour = factor(Expt))) +
+#'     geom_line(size = 2) +
+#'     theme_bw() +
+#'     theme(panel.background = element_rect(fill = "grey15"),
+#'           panel.border = element_blank(),
+#'           panel.grid.major = element_line(color = "grey45"),
+#'           panel.grid.minor = element_line(color = "grey25"))
+#'
+#' pltl + scale_color_jcolors(palette = "default")
+#'
+#' pltd + scale_color_jcolors(palette = "default")
+#'
+#'
+scale_color_jcolors = function (palette = c("default"),
+                                ...)
+{
+    palette <- match.arg(palette)
+    discrete_scale("colour",
+                   "jcolors",
+                   manual_pal(unname(jcolors(palette))),
+                   ...)
+}
+
+#' @export scale_colour_jcolors
+#' @rdname scale_jcolors
+scale_colour_jcolors = scale_color_jcolors
+
+
+#' @export scale_fill_jcolors
+#' @importFrom ggplot2 discrete_scale
+#' @rdname scale_jcolors
+scale_fill_jcolors = function (palette = c("default"),
+                               ...)
+{
+    palette <- match.arg(palette)
+    discrete_scale("fill",
+                   "jcolors",
+                   manual_pal(unname(jcolors(palette))),
+                   ...)
+}
 

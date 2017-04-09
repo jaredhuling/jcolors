@@ -4,21 +4,21 @@
 \alias{jcolors}
 \title{Vectors of colors for figures}
 \usage{
-jcolors(set = c("default"))
+jcolors(palette = c("default"))
 }
 \arguments{
-\item{set}{Character string indicating a set of colors.}
+\item{palette}{Character string indicating a palette of colors.}
 }
 \value{
-Vector of character strings representing the chosen set of colors.
+Vector of character strings representing the chosen palette of colors.
 }
 \description{
 Creates different vectors of related colors that may be useful for figures.
 }
 \examples{
 par(mar=c(0.6,5.1,0.6,0.6))
-plot(0, 0, type="n", xlab="", ylab="", xlim=c(0, 3), ylim=c(2.5, 0), yaxs="i",
-     xaxt="n", yaxt="n", xaxs="i")
+plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, 6), ylim = c(3, 0), yaxs = "i",
+     xaxt = "n", yaxt = "n", xaxs = "i")
 axis(side=2, at=1:2, c("default", "highlight"), las=1)
 
 def <- jcolors("default")
