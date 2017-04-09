@@ -51,7 +51,7 @@ display_jcolors <- function(palette = c("default"))
           col  = jcols,
           xlab = "", ylab = "",
           xaxt = "n", yaxt = "n", bty = "n")
-    text(1:5, par("usr")[1] - 0.025,
+    text(1:n, par("usr")[1] - 0.025,
          srt = 45, adj = 0.5,
          labels = cnames, xpd = TRUE)
 }
