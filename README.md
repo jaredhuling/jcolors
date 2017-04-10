@@ -184,3 +184,18 @@ pltd + scale_color_jcolors(palette = "pal6")
 ```
 
 ![](vignettes/moreplots-4.png)<!-- -->
+
+## Continuous Color Palettes
+
+
+```r
+colfunc <- jcolors_contin()
+jcols   <- colfunc(1000)
+n       <- length(jcols)
+image(1:n, 1, as.matrix(1:n),
+      col  = jcols,
+      xlab = "", ylab = "",
+      xaxt = "n", yaxt = "n", bty = "n")
+```
+
+![](vignettes/contin_example-1.png)<!-- -->
