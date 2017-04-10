@@ -189,6 +189,19 @@ pltd + scale_color_jcolors(palette = "pal6")
 
 
 ```r
+set.seed(42)
+plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y = y)) +
+      geom_hex() + coord_fixed() + theme(legend.position = "bottom")
+
+plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
+plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
+grid.arrange(plt2, plt3, ncol = 2)
+```
+
+![](vignettes/mountain_ex-1.png)<!-- -->
+
+
+```r
 colfunc  <- jcolors_contin()
 jcols    <- colfunc(1000)
 n        <- length(jcols)
@@ -215,4 +228,7 @@ image(1:n, 1, as.matrix(1:n),
 ```
 
 ![](vignettes/contin_example-1.png)<!-- -->
+
+
+
 

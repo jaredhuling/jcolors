@@ -8,7 +8,7 @@
 #' to \code{FALSE}
 #' @param interpolate Character string for color interpolation method.
 #' "linear" or "spline" interpolation available
-#' @param ... other arguments to be passed to \code{colorRampPalette}.
+#' @param ... other arguments to be passed to \code{\link[grDevices]{colorRampPalette}}.
 #' See \code{\link[grDevices]{colorRampPalette}} for details
 #' @return returns a function that takes an integer argument (the required number of colors), which
 #' then returns a character vector of colors
@@ -78,6 +78,65 @@ jcolors_contin <- function(palette = c("default",
            default = default.func,
            pal2    = pal2.func,
            pal3    = pal3.func)
+}
+
+
+
+
+#' continuous jcolors color scales
+#'
+#' @inheritParams jcolors_contin
+#' @export scale_color_jcolors_contin
+#' @importFrom ggplot2 discrete_scale
+#' @importFrom scales manual_pal
+#' @rdname scale_jcolors
+#'
+#' @examples
+#' library(ggplot2)
+#'
+#' plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y = y)) +
+#'    geom_hex() + coord_fixed()
+#'
+#' plt + scale_fill_jcolors_contin() + theme_bw()
+#'
+#' plt + scale_fill_jcolors_contin("pal2", bias = 1.5) + theme_bw()
+#'
+#' plt + scale_fill_jcolors_contin("pal3") + theme_bw()
+#'
+#'
+scale_color_jcolors_contin = function (palette = c("default",
+                                                   "pal2",
+                                                   "pal3"),
+                                       ...)
+{
+    palette <- match.arg(palette)
+    local_scale_color <- function(...,
+                                  bias, space, alpha,  ## args not to pass to gradientn
+                                  reverse, interpolate)
+        scale_color_gradientn(colours = colours, ...)
+    local_scale_color(...)
+}
+
+#' @export scale_colour_jcolors_contin
+#' @rdname scale_jcolors
+scale_colour_jcolors_contin = scale_color_jcolors_contin
+
+
+#' @export scale_fill_jcolors_contin
+#' @importFrom ggplot2 discrete_scale
+#' @rdname scale_jcolors
+scale_fill_jcolors_contin = function (palette = c("default",
+                                                  "pal2",
+                                                  "pal3"),
+                                      ...)
+{
+    palette <- match.arg(palette)
+    colours <- jcolors_contin(palette, ...)(512L)
+    local_scale_fill <- function(...,
+                                 bias, space, alpha,  ## args not to pass to gradientn
+                                 reverse, interpolate)
+        scale_fill_gradientn(colours = colours, ...)
+    local_scale_fill(...)
 }
 
 

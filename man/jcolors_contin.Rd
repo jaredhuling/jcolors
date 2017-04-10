@@ -16,7 +16,7 @@ to \code{FALSE}}
 \item{interpolate}{Character string for color interpolation method.
 "linear" or "spline" interpolation available}
 
-\item{...}{other arguments to be passed to \code{colorRampPalette}.
+\item{...}{other arguments to be passed to \code{\link[grDevices]{colorRampPalette}}.
 See \code{\link[grDevices]{colorRampPalette}} for details}
 }
 \value{
