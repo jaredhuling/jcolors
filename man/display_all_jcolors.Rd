@@ -6,9 +6,6 @@
 \usage{
 display_all_jcolors()
 }
-\arguments{
-\item{palette}{Character string indicating a palette of colors.}
-}
 \description{
 Creates different vectors of related colors that may be useful for figures.
 }

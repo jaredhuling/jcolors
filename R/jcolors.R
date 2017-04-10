@@ -128,7 +128,6 @@ display_jcolors <- function(palette = c("default",
 #'
 #' Creates different vectors of related colors that may be useful for figures.
 #'
-#' @param palette Character string indicating a palette of colors.
 #' @export
 #' @importFrom grDevices rgb2hsv
 #' @importFrom graphics points
