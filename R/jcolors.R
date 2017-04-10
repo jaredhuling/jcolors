@@ -251,12 +251,3 @@ scale_fill_jcolors = function (palette = c("default",
 }
 
 
-## colfunc <- colorRampPalette(jcolors("pal4")[c(1, 2, 3, 6)], interpolate = "spline")
-
-## colfunc <- colorRampPalette(jcolors("pal4")[c(1, 2, 3, 6)], interpolate = "spline"); jcols <- colfunc(1000); n <- length(jcols)
-
-## image(1:n, 1, as.matrix(1:n),
-##       col  = jcols,
-##       xlab = "", ylab = "",
-##       xaxt = "n", yaxt = "n", bty = "n")
-
