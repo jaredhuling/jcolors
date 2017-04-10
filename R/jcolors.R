@@ -145,6 +145,8 @@ display_jcolors <- function(palette = c("default",
 #' @export
 #' @importFrom grDevices rgb2hsv
 #' @importFrom graphics points
+#' @importFrom graphics axis
+#' @importFrom graphics plot
 #' @examples
 display_all_jcolors <- function()
 {
