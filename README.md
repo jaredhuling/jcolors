@@ -69,6 +69,7 @@ colour = factor(Expt))) +
     geom_line(size = 2) +
     theme_bw() +
     theme(panel.background = element_rect(fill = "grey15"),
+          legend.key = element_rect(fill = "grey15"),
           panel.border = element_blank(),
           panel.grid.major = element_line(color = "grey45"),
           panel.grid.minor = element_line(color = "grey25"),
@@ -129,6 +130,14 @@ display_jcolors("pal5")
 
 ![](vignettes/unnamed-chunk-8-1.png)<!-- -->
 
+## pal6
+
+```r
+display_jcolors("pal6")
+```
+
+![](vignettes/unnamed-chunk-9-1.png)<!-- -->
+
 
 
 More example plots
@@ -154,3 +163,23 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal5"),
 ```
 
 ![](vignettes/moreplots-3.png)<!-- -->
+
+```r
+pltd <- ggplot(data = OrchardSprays, aes(x = rowpos, y = decrease,
+group = factor(treatment),
+colour = factor(treatment))) +
+    geom_line(size = 2) +
+    geom_point(size = 4) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "grey15"),
+          legend.key = element_rect(fill = "grey15"),
+          panel.border = element_blank(),
+          panel.grid.major = element_line(color = "grey45"),
+          panel.grid.minor = element_line(color = "grey25"),
+          legend.position = "bottom")
+
+
+pltd + scale_color_jcolors(palette = "pal6")
+```
+
+![](vignettes/moreplots-4.png)<!-- -->
