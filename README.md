@@ -34,6 +34,16 @@ jcolors('default')
 ##       "#F5E400"
 ```
 
+## All available palettes
+
+
+```r
+display_all_jcolors()
+```
+
+![](vignettes/displayall-1.png)<!-- -->
+
+## Use with `ggplot2`
 
 Now use `scale_color_jcolors()` with `ggplot2`:
 
@@ -77,13 +87,6 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
 
 ![](vignettes/unnamed-chunk-3-2.png)<!-- -->
 
-```r
-grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
-             pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
-```
-
-![](vignettes/unnamed-chunk-3-3.png)<!-- -->
-
 Color palettes can be displayed using `display_jcolors()`
 
 ## default
@@ -110,3 +113,44 @@ display_jcolors("pal3")
 
 ![](vignettes/unnamed-chunk-6-1.png)<!-- -->
 
+## pal4
+
+```r
+display_jcolors("pal4")
+```
+
+![](vignettes/unnamed-chunk-7-1.png)<!-- -->
+
+## pal5
+
+```r
+display_jcolors("pal5")
+```
+
+![](vignettes/unnamed-chunk-8-1.png)<!-- -->
+
+
+
+More example plots
+
+
+```r
+grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
+             pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
+```
+
+![](vignettes/moreplots-1.png)<!-- -->
+
+```r
+grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
+             pltd + scale_color_jcolors(palette = "pal4"), ncol = 2)
+```
+
+![](vignettes/moreplots-2.png)<!-- -->
+
+```r
+grid.arrange(pltl + scale_color_jcolors(palette = "pal5"),
+             pltd + scale_color_jcolors(palette = "pal5"), ncol = 2)
+```
+
+![](vignettes/moreplots-3.png)<!-- -->

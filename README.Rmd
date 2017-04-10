@@ -33,6 +33,13 @@ jcolors('default')
 
 ```
 
+## All available palettes
+
+```{r displayall}
+display_all_jcolors()
+```
+
+## Use with `ggplot2`
 
 Now use `scale_color_jcolors()` with `ggplot2`:
 
@@ -68,9 +75,6 @@ grid.arrange(pltl + scale_color_jcolors(palette = "default"),
 grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
              pltd + scale_color_jcolors(palette = "pal2"), ncol = 2)
 
-grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
-             pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
-
 
 
 ```
@@ -92,3 +96,29 @@ display_jcolors("pal2")
 display_jcolors("pal3")
 ```
 
+## pal4
+```{r}
+display_jcolors("pal4")
+```
+
+## pal5
+```{r}
+display_jcolors("pal5")
+```
+
+
+
+More example plots
+
+```{r moreplots}
+grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
+             pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
+
+grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
+             pltd + scale_color_jcolors(palette = "pal4"), ncol = 2)
+
+grid.arrange(pltl + scale_color_jcolors(palette = "pal5"),
+             pltd + scale_color_jcolors(palette = "pal5"), ncol = 2)
+
+
+```

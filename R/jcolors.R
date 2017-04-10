@@ -21,7 +21,9 @@
 #' points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 8)
 jcolors <- function(palette = c("default",
                                 "pal2",
-                                "pal3"))
+                                "pal3",
+                                "pal4",
+                                "pal5"))
 {
     default <- c('chartreuse3'        = "#66CD00", # chartreuse3
                  'deepskyblue3'       = "#009ACD", # deepskyblue3
@@ -65,10 +67,27 @@ jcolors <- function(palette = c("default",
               'fluorescent_orange' = "#FFBF00"
               )
 
+    pal4 <- c(## 'boston_university_red'  = "#D00000",
+              'yankees_blue'   = "#1B1F3A",
+              'purple_taupe'   = "#53354A",
+              'deep_taupe'     = "#7A6C5D",
+              'raspberry'      = "#BE3144",
+              'mango'          = "#FF7844",
+              'straw'          = "#E3D26F")
+
+    pal5 <- c(## 'mughal_green'     = "#306B34",
+              'stee_teal'        = "#628395",
+              'jun_bud'          = "#C5D86D",
+              'crimson'          = "#DD0D34",
+              'orioles_orange'   = "#FC471E",
+              'st_patricks_blue' = "#17377A")
+
     switch(match.arg(palette),
            default = default,
            pal2    = pal2,
            pal3    = pal3,
+           pal4    = pal4,
+           pal5    = pal5,
            earthen = earthen)
 }
 
@@ -79,7 +98,6 @@ jcolors <- function(palette = c("default",
 #' Creates different vectors of related colors that may be useful for figures.
 #'
 #' @param palette Character string indicating a palette of colors.
-#' @return Vector of character strings representing the chosen palette of colors.
 #' @export
 #' @importFrom grDevices rgb2hsv
 #' @importFrom graphics image
@@ -88,7 +106,9 @@ jcolors <- function(palette = c("default",
 #' @examples
 display_jcolors <- function(palette = c("default",
                                         "pal2",
-                                        "pal3"))
+                                        "pal3",
+                                        "pal4",
+                                        "pal5"))
 {
     palette <- match.arg(palette)
     jcols   <- jcolors(palette)
@@ -101,6 +121,40 @@ display_jcolors <- function(palette = c("default",
     text(1:n, par("usr")[1] - 0.025,
          srt = 45, adj = 0.5,
          labels = cnames, xpd = TRUE)
+}
+
+# display all jcolors
+#' Display all jcolors
+#'
+#' Creates different vectors of related colors that may be useful for figures.
+#'
+#' @param palette Character string indicating a palette of colors.
+#' @export
+#' @importFrom grDevices rgb2hsv
+#' @importFrom graphics points
+#' @examples
+display_all_jcolors <- function()
+{
+    palette <- c("default",
+                 "pal2",
+                 "pal3",
+                 "pal4",
+                 "pal5")
+    jcols    <- sapply(palette, jcolors)
+    maxlen   <- max(sapply(jcols, length))
+    ncols    <- length(jcols)
+
+
+    plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, maxlen + 1),
+         ylim = c(ncols + 1, 0), yaxs = "i",
+         xaxt = "n", yaxt = "n", xaxs = "i")
+    axis(side = 2, at = 1:ncols, palette, las = 1)
+
+    for (c in 1:ncols)
+    {
+        pal <- jcolors(palette[c])
+        points(seq(along = pal), rep(c, length(pal)), pch = 22, bg = pal, cex = 8)
+    }
 }
 
 
@@ -143,7 +197,9 @@ display_jcolors <- function(palette = c("default",
 #'
 scale_color_jcolors = function (palette = c("default",
                                             "pal2",
-                                            "pal3"),
+                                            "pal3",
+                                            "pal4",
+                                            "pal5"),
                                 ...)
 {
     palette <- match.arg(palette)
@@ -163,7 +219,9 @@ scale_colour_jcolors = scale_color_jcolors
 #' @rdname scale_jcolors
 scale_fill_jcolors = function (palette = c("default",
                                            "pal2",
-                                           "pal3"),
+                                           "pal3",
+                                           "pal4",
+                                           "pal5"),
                                ...)
 {
     palette <- match.arg(palette)
