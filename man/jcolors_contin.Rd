@@ -4,10 +4,14 @@
 \alias{jcolors_contin}
 \title{continuous palettes of colors for figures}
 \usage{
-jcolors_contin(palette = c("default"), interpolate = c("spline", "linear"))
+jcolors_contin(palette = c("default"), reverse = FALSE,
+  interpolate = c("spline", "linear"))
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}
+
+\item{reverse}{logical value indicating whether the color palette should be reversed. Defaults
+to \code{FALSE}}
 
 \item{interpolate}{Character string for color interpolation method.
 "linear" or "spline" interpolation available}
