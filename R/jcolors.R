@@ -24,7 +24,8 @@ jcolors <- function(palette = c("default",
                                 "pal3",
                                 "pal4",
                                 "pal5",
-                                "pal6"))
+                                "pal6",
+                                "rainbow"))
 {
 
 
@@ -99,6 +100,16 @@ jcolors <- function(palette = c("default",
               'rusty_red'        = "#D7263D",
               'dark_khaki'       = "#BBBE64")
 
+    rainbow <- c('rosso_corsa'          = "#D12600",
+                 'spanish_orange'       = "#DB6A00",
+                 'green_yellow'         = "#B2FF2E",
+                 'green'                = "#00AD00",
+                 'pale_cerulean'        = "#9CCADE",
+                 'sea_blue'             = "#005B94",
+                 'st_patricks_blue'     = "#1E2085",
+                 'tyrian_purple'        = "#610052",
+                 'amaranth_deep_purple' = "#953272")
+
     switch(match.arg(palette),
            default = default,
            pal2    = pal2,
@@ -106,6 +117,7 @@ jcolors <- function(palette = c("default",
            pal4    = pal4,
            pal5    = pal5,
            pal6    = pal6,
+           rainbow = rainbow,
            earthen = earthen)
 }
 
@@ -122,12 +134,14 @@ jcolors <- function(palette = c("default",
 #' @importFrom graphics text
 #' @importFrom graphics par
 #' @examples
+#' display_jcolors()
 display_jcolors <- function(palette = c("default",
                                         "pal2",
                                         "pal3",
                                         "pal4",
                                         "pal5",
-                                        "pal6"))
+                                        "pal6",
+                                        "rainbow"))
 {
     palette <- match.arg(palette)
     jcols   <- jcolors(palette)
@@ -153,6 +167,7 @@ display_jcolors <- function(palette = c("default",
 #' @importFrom graphics axis
 #' @importFrom graphics plot
 #' @examples
+#' display_all_jcolors()
 display_all_jcolors <- function()
 {
     palette <- c("default",
@@ -160,7 +175,8 @@ display_all_jcolors <- function()
                  "pal3",
                  "pal4",
                  "pal5",
-                 "pal6")
+                 "pal6",
+                 "rainbow")
     jcols    <- sapply(palette, jcolors)
     maxlen   <- max(sapply(jcols, length))
     ncols    <- length(jcols)
@@ -224,7 +240,8 @@ scale_color_jcolors = function (palette = c("default",
                                             "pal3",
                                             "pal4",
                                             "pal5",
-                                            "pal6"),
+                                            "pal6",
+                                            "rainbow"),
                                 ...)
 {
     palette <- match.arg(palette)
@@ -247,7 +264,8 @@ scale_fill_jcolors = function (palette = c("default",
                                            "pal3",
                                            "pal4",
                                            "pal5",
-                                           "pal6"),
+                                           "pal6",
+                                           "rainbow"),
                                ...)
 {
     palette <- match.arg(palette)

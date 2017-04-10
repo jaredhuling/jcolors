@@ -9,4 +9,7 @@ display_all_jcolors()
 \description{
 Creates different vectors of related colors that may be useful for figures.
 }
+\examples{
+display_all_jcolors()
+}
 

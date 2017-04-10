@@ -4,8 +4,8 @@
 \alias{jcolors_contin}
 \title{continuous palettes of colors for figures}
 \usage{
-jcolors_contin(palette = c("default", "pal2", "pal3"), reverse = FALSE,
-  interpolate = c("spline", "linear"), ...)
+jcolors_contin(palette = c("default", "pal2", "pal3", "rainbow"),
+  reverse = FALSE, interpolate = c("spline", "linear"), ...)
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}

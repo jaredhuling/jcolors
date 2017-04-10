@@ -138,6 +138,15 @@ display_jcolors("pal6")
 
 ![](vignettes/unnamed-chunk-9-1.png)<!-- -->
 
+## rainbow
+
+```r
+display_jcolors("rainbow")
+```
+
+![](vignettes/unnamed-chunk-10-1.png)<!-- -->
+
+
 
 
 More example plots
@@ -212,7 +221,10 @@ jcols2   <- colfunc2(1000)
 colfunc3 <- jcolors_contin("pal3")
 jcols3   <- colfunc3(1000)
 
-par(mfrow = c(3,1), mai = c(0.1, 0.1, 0.1, 0.1))
+colfuncr <- jcolors_contin("rainbow")
+jcolsr   <- colfuncr(1000)
+
+par(mfrow = c(4,1), mai = c(0.1, 0.1, 0.1, 0.1))
 image(1:n, 1, as.matrix(1:n),
       col  = jcols,
       xlab = "", ylab = "",
@@ -223,6 +235,10 @@ image(1:n, 1, as.matrix(1:n),
       xaxt = "n", yaxt = "n", bty = "n")
 image(1:n, 1, as.matrix(1:n),
       col  = jcols3,
+      xlab = "", ylab = "",
+      xaxt = "n", yaxt = "n", bty = "n")
+image(1:n, 1, as.matrix(1:n),
+      col  = jcolsr,
       xlab = "", ylab = "",
       xaxt = "n", yaxt = "n", bty = "n")
 ```

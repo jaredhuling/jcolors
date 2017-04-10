@@ -26,7 +26,8 @@
 #'
 jcolors_contin <- function(palette = c("default",
                                        "pal2",
-                                       "pal3"),
+                                       "pal3",
+                                       "rainbow"),
                            reverse = FALSE,
                            interpolate = c("spline", "linear"),
                            ...)
@@ -74,10 +75,27 @@ jcolors_contin <- function(palette = c("default",
                                   ...)
 
 
+    rainbow <- c('rosso_corsa'          = "#D12600",
+                 'spanish_orange'       = "#DB6A00",
+                 'green_yellow'         = "#B2FF2E",
+                 'green'                = "#00AD00",
+                 'pale_cerulean'        = "#9CCADE",
+                 'sea_blue'             = "#005B94",
+                 'st_patricks_blue'     = "#1E2085",
+                 'tyrian_purple'        = "#610052",
+                 'amaranth_deep_purple' = "#953272")
+
+    if (reverse) rainbow <- rev(rainbow)
+
+    rainbow.func <- colorRampPalette(rainbow,
+                                     interpolate = interpolate,
+                                     ...)
+
     switch(match.arg(palette),
            default = default.func,
            pal2    = pal2.func,
-           pal3    = pal3.func)
+           pal3    = pal3.func,
+           rainbow = rainbow.func)
 }
 
 
@@ -106,7 +124,8 @@ jcolors_contin <- function(palette = c("default",
 #'
 scale_color_jcolors_contin = function (palette = c("default",
                                                    "pal2",
-                                                   "pal3"),
+                                                   "pal3",
+                                                   "rainbow"),
                                        ...)
 {
     palette <- match.arg(palette)
@@ -127,7 +146,8 @@ scale_colour_jcolors_contin = scale_color_jcolors_contin
 #' @rdname scale_jcolors
 scale_fill_jcolors_contin = function (palette = c("default",
                                                   "pal2",
-                                                  "pal3"),
+                                                  "pal3",
+                                                  "rainbow"),
                                       ...)
 {
     palette <- match.arg(palette)
