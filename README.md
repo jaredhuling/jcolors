@@ -189,13 +189,30 @@ pltd + scale_color_jcolors(palette = "pal6")
 
 
 ```r
-colfunc <- jcolors_contin()
-jcols   <- colfunc(1000)
-n       <- length(jcols)
+colfunc  <- jcolors_contin()
+jcols    <- colfunc(1000)
+n        <- length(jcols)
+
+colfunc2 <- jcolors_contin("pal2")
+jcols2   <- colfunc2(1000)
+
+colfunc3 <- jcolors_contin("pal3")
+jcols3   <- colfunc3(1000)
+
+par(mfrow = c(3,1), mai = c(0.1, 0.1, 0.1, 0.1))
 image(1:n, 1, as.matrix(1:n),
       col  = jcols,
+      xlab = "", ylab = "",
+      xaxt = "n", yaxt = "n", bty = "n")
+image(1:n, 1, as.matrix(1:n),
+      col  = jcols2,
+      xlab = "", ylab = "",
+      xaxt = "n", yaxt = "n", bty = "n")
+image(1:n, 1, as.matrix(1:n),
+      col  = jcols3,
       xlab = "", ylab = "",
       xaxt = "n", yaxt = "n", bty = "n")
 ```
 
 ![](vignettes/contin_example-1.png)<!-- -->
+
