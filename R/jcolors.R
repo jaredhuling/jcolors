@@ -40,8 +40,10 @@ jcolors <- function(palette = c("default",
     pal2 <- c('blue_yonder'    = "#3E71A8",
               ## 'mustard'        = "#FEF735",
               'arctic_lime'    = "#CEFF1A",
-              'dark_byzantium' = "#5F3659",
-              'vivid_gamboge'  = "#FE9300",
+              ## 'dark_byzantium' = "#5F3659",
+              'mardi_gras'     = "#870E75",
+              ## 'vivid_gamboge'  = "#FE9300",
+              'safety_orange'  = "#FE6900",
               'tiffany_blue'   = "#0BB19F")
 
     earthen <- c('marble'       = "#2C3524",
