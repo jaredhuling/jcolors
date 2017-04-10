@@ -3,7 +3,7 @@ output:
     html_document:
         keep_md: true
         fig_width: 10
-        fig_height: 6
+        fig_height: 5
 ---
 
 ```{r setup, include=FALSE}

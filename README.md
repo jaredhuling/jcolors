@@ -28,10 +28,10 @@ jcolors('default')
 ```
 
 ```
-##     chartreuse3    deepskyblue3       orangered     darkorchid4 
-##       "#66CD00"       "#009ACD"       "#FF4500"       "#9A32CD" 
-## titanium_yellow 
-##       "#F5E400"
+##        kelly_green rich_electric_blue        maximum_red 
+##          "#29BF12"          "#00A5CF"          "#DE1A1A" 
+##     majorelle_blue fluorescent_orange 
+##          "#574AE2"          "#FFBF00"
 ```
 
 ## All available palettes

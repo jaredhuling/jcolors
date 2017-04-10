@@ -26,19 +26,22 @@ jcolors <- function(palette = c("default",
                                 "pal5",
                                 "pal6"))
 {
-    default <- c('chartreuse3'        = "#66CD00", # chartreuse3
-                 'deepskyblue3'       = "#009ACD", # deepskyblue3
-                 'orangered'          = "#FF4500", # orangered
-                 'darkorchid4'        = "#9A32CD", # darkorchid3 (darkorchid4 = #68228B, darkorchi1 = #BF3EFF)
-                 'titanium_yellow'    = "#F5E400")
-                 ## 'arctic_lime'        = "#CEFF1A")
-                 ## 'mikado_yellow'      = "#FFBE0B")
-                 ## 'ucla_gold'          = "#FFAE03")
-                 ## 'yellow'        = "#FFFF00") # yellow
 
-    ## 'charleston_green' = "#2D2A32"
+
+
+    default <- c(## 'plum'               = "#963484",
+                 'kelly_green'        = "#29BF12",
+                 'rich_electric_blue' = "#00A5CF",
+                 ## 'cornell_red'        = "#A8201A",
+                 'maximum_red'        = "#DE1A1A",
+                 ## 'persian_indigo'     = "#22007C",
+                 'majorelle_blue'     = "#574AE2",
+                 ## 'deep_saffron'       = "#F39237"
+                 'fluorescent_orange' = "#FFBF00"
+                 )
 
     highlight <- c('highlight' = "yellow")
+
 
     pal2 <- c('blue_yonder'    = "#3E71A8",
               ## 'mustard'        = "#FEF735",
@@ -49,6 +52,18 @@ jcolors <- function(palette = c("default",
               'safety_orange'  = "#FE6900",
               'tiffany_blue'   = "#0BB19F")
 
+
+    ## 'charleston_green' = "#2D2A32"
+    pal3 <- c('chartreuse3'        = "#66CD00", # chartreuse3
+              'deepskyblue3'       = "#009ACD", # deepskyblue3
+              'orangered'          = "#FF4500", # orangered
+              'darkorchid4'        = "#9A32CD", # darkorchid3 (darkorchid4 = #68228B, darkorchi1 = #BF3EFF)
+              'titanium_yellow'    = "#F5E400")
+            ## 'arctic_lime'        = "#CEFF1A")
+            ## 'mikado_yellow'      = "#FFBE0B")
+            ## 'ucla_gold'          = "#FFAE03")
+            ## 'yellow'        = "#FFFF00") # yellow
+
     earthen <- c('marble'       = "#2C3524",
                  'top_sky'      = "#2E79BF",
                  'granite'      = "#CEC3AE",
@@ -57,16 +72,6 @@ jcolors <- function(palette = c("default",
                  ## 'grass_in_sun' = "#536D1B",
                  'reflection'   = "#D3AB4C")
 
-    pal3 <- c(## 'plum'               = "#963484",
-              'kelly_green'        = "#29BF12",
-              'rich_electric_blue' = "#00A5CF",
-              ## 'cornell_red'        = "#A8201A",
-              'maximum_red'        = "#DE1A1A",
-              ## 'persian_indigo'     = "#22007C",
-              'majorelle_blue'     = "#574AE2",
-              ## 'deep_saffron'       = "#F39237"
-              'fluorescent_orange' = "#FFBF00"
-              )
 
     pal4 <- c(## 'boston_university_red'  = "#D00000",
               ## 'yankees_blue'   = "#1B1F3A",
