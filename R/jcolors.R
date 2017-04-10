@@ -69,7 +69,8 @@ jcolors <- function(palette = c("default",
               )
 
     pal4 <- c(## 'boston_university_red'  = "#D00000",
-              'yankees_blue'   = "#1B1F3A",
+              ## 'yankees_blue'   = "#1B1F3A",
+              'yankees_blue'   = "#202547",
               'purple_taupe'   = "#53354A",
               'deep_taupe'     = "#7A6C5D",
               'raspberry'      = "#BE3144",
@@ -79,9 +80,10 @@ jcolors <- function(palette = c("default",
     pal5 <- c(## 'mughal_green'     = "#306B34",
               'steel_teal'       = "#628395",
               'june_bud'         = "#C5D86D",
-              'crimson'          = "#DD0D34",
+              'cherry'           = "#DB2763",
               'st_patricks_blue' = "#17377A",
-              'orioles_orange'   = "#FC471E")
+              'orioles_orange'   = "#FC471E",
+              'turquoise'        = "#55DDE0")
 
     pal6 <- c('rackley'          = "#558aa6",
               'dark_goldenrod'   = "#B1740F",

@@ -152,7 +152,8 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
-             pltd + scale_color_jcolors(palette = "pal4"), ncol = 2)
+             pltd + scale_color_jcolors(palette = "pal4") + 
+                 theme(panel.background = element_rect(fill = "grey5")), ncol = 2)
 ```
 
 ![](vignettes/moreplots-2.png)<!-- -->

@@ -121,7 +121,8 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
              pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
 
 grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
-             pltd + scale_color_jcolors(palette = "pal4"), ncol = 2)
+             pltd + scale_color_jcolors(palette = "pal4") + 
+                 theme(panel.background = element_rect(fill = "grey5")), ncol = 2)
 
 grid.arrange(pltl + scale_color_jcolors(palette = "pal5"),
              pltd + scale_color_jcolors(palette = "pal5"), ncol = 2)
