@@ -195,6 +195,7 @@ scale_color_jcolors_contin = function (palette = c("default",
                                        ...)
 {
     palette <- match.arg(palette)
+    colours <- jcolors_contin(palette, ...)(512L)
     local_scale_color <- function(...,
                                   bias, space, alpha,  ## args not to pass to gradientn
                                   reverse, interpolate)
