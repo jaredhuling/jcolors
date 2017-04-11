@@ -1,56 +1,17 @@
----
-output: 
-    html_document:
-        toc: true
-        keep_md: true
-        fig_width: 10
-        fig_height: 5
----
+## ---- eval = FALSE-------------------------------------------------------
+#  install.packages("devtools")
+#  devtools::install_github("jaredhuling/jcolors")
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
-```
-
-# `jcolors` intro 
-
-[![Build Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
-
-`jcolors` contains a selection of `ggplot2` color palettes that I like
-
-## Installation
-
-
-Install `jcolors` from GitHub:
-
-```{r, eval = FALSE}
-install.packages("devtools")
-devtools::install_github("jaredhuling/jcolors")
-```
-
-Access the `jcolors` color palettes with `jcolors()`:
-
-```{r eval = TRUE, message = FALSE, warning = FALSE}
+## ----eval = TRUE, message = FALSE, warning = FALSE-----------------------
 library(jcolors)
 
 jcolors('default')
 
-```
 
-## Display all available palettes
-
-```{r displayall, fig.height = 8}
+## ----displayall, fig.height = 5------------------------------------------
 display_all_jcolors()
-```
 
-
-
-# Discrete Color Palettes
-
-## Use with `ggplot2`
-
-Now use `scale_color_jcolors()` with `ggplot2`:
-
-```{r eval = TRUE, message = FALSE, warning = FALSE}
+## ----eval = TRUE, message = FALSE, warning = FALSE-----------------------
 library(ggplot2)
 library(gridExtra)
 
@@ -85,48 +46,29 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
 
 
 
-```
 
-Color palettes can be displayed using `display_jcolors()`
-
-## default
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("default")
-```
 
-## pal2
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("pal2")
-```
 
-## pal3
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("pal3")
-```
 
-## pal4
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("pal4")
-```
 
-## pal5
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("pal5")
-```
 
-## pal6
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("pal6")
-```
 
-## rainbow
-```{r}
+## ------------------------------------------------------------------------
 display_jcolors("rainbow")
-```
 
-## More example plots
-
-```{r moreplots}
+## ----moreplots-----------------------------------------------------------
 grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
              pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
 
@@ -154,23 +96,11 @@ colour = factor(treatment))) +
 
 pltd + scale_color_jcolors(palette = "pal6")
 
-```
 
-
-
-
-
-# Continuous Color Palettes
-
-## Display all continuous palettes
-```{r contin_example, fig.height = 8}
+## ----contin_example, fig.height = 8--------------------------------------
 display_all_jcolors_contin()
-```
 
-
-## Use with `ggplot2`
-
-```{r mountain_ex, fig.height=6}
+## ----mountain_ex, fig.height=6-------------------------------------------
 set.seed(42)
 plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y = y)) +
       geom_hex() + coord_fixed() + theme(legend.position = "bottom")
@@ -178,37 +108,4 @@ plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y =
 plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
 plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
 grid.arrange(plt2, plt3, ncol = 2)
-```
-
-# `ggplot2` themes
-
-```{r diamonds_light_theme, fig.height = 6, message = FALSE, warning = FALSE}
-library(scales)
-
-p1 <- ggplot(aes(x = carat, y = price), data = diamonds) + 
-      geom_point(alpha = 0.5, size = 1, aes(color = clarity)) +
-      scale_color_jcolors("rainbow") +                         
-      scale_x_continuous(trans = log10_trans(), limits = c(0.2, 3),
-        breaks = c(0.2, 0.5, 1, 2, 3)) + 
-      scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
-        breaks = c(350, 1000, 5000, 10000, 15000)) +
-      ggtitle('Price (log10) by Carat (log10) and Clarity') + 
-        theme_light_bg()
-
-
-p2 <- ggplot(aes(x = carat, y = price), data = diamonds) + 
-      geom_point(alpha = 0.5, size = 1, aes(color = cut)) +
-      scale_color_jcolors("pal4") +                         
-      scale_x_continuous(trans = log10_trans(), limits = c(0.2, 3),
-        breaks = c(0.2, 0.5, 1, 2, 3)) + 
-      scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
-        breaks = c(350, 1000, 5000, 10000, 15000)) +
-      ggtitle('Price (log10) by Carat (log10) and Cut') + 
-        theme_light_bg()
-
-grid.arrange(p1, p2, ncol = 2)
-```
-
-
-
 

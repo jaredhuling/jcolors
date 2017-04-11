@@ -225,6 +225,37 @@ grid.arrange(plt2, plt3, ncol = 2)
 
 ![](vignettes/readme_figs/mountain_ex-1.png)<!-- -->
 
+# `ggplot2` themes
+
+
+```r
+library(scales)
+
+p1 <- ggplot(aes(x = carat, y = price), data = diamonds) + 
+      geom_point(alpha = 0.5, size = 1, aes(color = clarity)) +
+      scale_color_jcolors("rainbow") +                         
+      scale_x_continuous(trans = log10_trans(), limits = c(0.2, 3),
+        breaks = c(0.2, 0.5, 1, 2, 3)) + 
+      scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
+        breaks = c(350, 1000, 5000, 10000, 15000)) +
+      ggtitle('Price (log10) by Carat (log10) and Clarity') + 
+        theme_light_bg()
+
+
+p2 <- ggplot(aes(x = carat, y = price), data = diamonds) + 
+      geom_point(alpha = 0.5, size = 1, aes(color = cut)) +
+      scale_color_jcolors("pal4") +                         
+      scale_x_continuous(trans = log10_trans(), limits = c(0.2, 3),
+        breaks = c(0.2, 0.5, 1, 2, 3)) + 
+      scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
+        breaks = c(350, 1000, 5000, 10000, 15000)) +
+      ggtitle('Price (log10) by Carat (log10) and Cut') + 
+        theme_light_bg()
+
+grid.arrange(p1, p2, ncol = 2)
+```
+
+![](vignettes/readme_figs/diamonds_light_theme-1.png)<!-- -->
 
 
 

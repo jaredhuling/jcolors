@@ -1,11 +1,13 @@
 Package: jcolors
 Type: Package
-Title: Colors palettes for R and 'gglot2'
+Title: Colors palettes for R and 'ggplot2', additional themes for 'ggplot2' 
 Version: 0.0.1
-Author: Jared Huling <jaredhuling@gmail.com>
-Maintainer: Jared Huling <jaredhuling@gmail.com>
+Authors@R: c(person("Jared", "Huling", role = c("aut", "cre"),
+    email = "jaredhuling@gmail.com"),
+    person("Jeffrey B.", "Arnold", role = c("ctb"),
+    comment = "Code from the ggthemes package."))
 Description: This package contains a selection of color palettes designed by the package author
-License: GPL-3 
+License: GPL-32
 Encoding: UTF-8
 LazyData: true
 Depends:
