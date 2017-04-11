@@ -1,7 +1,7 @@
 
 
 
-# jcolors
+# `jcolors` intro 
 
 [![Build Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
 
@@ -34,7 +34,7 @@ jcolors('default')
 ##          "#574AE2"          "#FFBF00"
 ```
 
-## All available palettes
+## Display all available palettes
 
 
 ```r
@@ -42,6 +42,10 @@ display_all_jcolors()
 ```
 
 ![](vignettes/displayall-1.png)<!-- -->
+
+
+
+# Discrete Color Palettes
 
 ## Use with `ggplot2`
 
@@ -146,10 +150,7 @@ display_jcolors("rainbow")
 
 ![](vignettes/unnamed-chunk-10-1.png)<!-- -->
 
-
-
-
-More example plots
+## More example plots
 
 
 ```r
@@ -194,20 +195,12 @@ pltd + scale_color_jcolors(palette = "pal6")
 
 ![](vignettes/moreplots-4.png)<!-- -->
 
-## Continuous Color Palettes
 
 
-```r
-set.seed(42)
-plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y = y)) +
-      geom_hex() + coord_fixed() + theme(legend.position = "bottom")
 
-plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
-plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
-grid.arrange(plt2, plt3, ncol = 2)
-```
 
-![](vignettes/mountain_ex-1.png)<!-- -->
+# Continuous Color Palettes
+
 
 
 ```r
@@ -244,6 +237,22 @@ image(1:n, 1, as.matrix(1:n),
 ```
 
 ![](vignettes/contin_example-1.png)<!-- -->
+
+## Use with `ggplot2`
+
+
+```r
+set.seed(42)
+plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y = y)) +
+      geom_hex() + coord_fixed() + theme(legend.position = "bottom")
+
+plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
+plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
+grid.arrange(plt2, plt3, ncol = 2)
+```
+
+![](vignettes/mountain_ex-1.png)<!-- -->
+
 
 
 
