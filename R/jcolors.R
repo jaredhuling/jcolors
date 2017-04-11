@@ -163,7 +163,7 @@ display_jcolors <- function(palette = c("default",
 #'
 #' @export
 #' @importFrom grDevices rgb2hsv
-#' @importFrom graphics points
+#' @importFrom graphics rect
 #' @importFrom graphics axis
 #' @importFrom graphics plot
 #' @examples
@@ -193,7 +193,14 @@ display_all_jcolors <- function()
     for (c in 1:ncols)
     {
         pal <- jcolors(palette[c])
-        points(seq(along = pal), rep(yseq[c], length(pal)), pch = 22, bg = pal, cex = 6)
+        #points(seq(along = pal), rep(yseq[c], length(pal)), pch = 22, bg = pal, cex = 6)
+        rect(xleft   = seq(along = pal) - 0.5,
+             ybottom = yseq[c] - 0.85,
+             xright  = seq(along = pal) + 0.5,
+             ytop    = yseq[c] + 0.85,
+             border  = NA,
+             lwd     = 0,
+             col     = pal)
     }
 }
 
