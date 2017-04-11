@@ -41,7 +41,7 @@ jcolors('default')
 display_all_jcolors()
 ```
 
-![](vignettes/displayall-1.png)<!-- -->
+![](vignettes/readme_figs/displayall-1.png)<!-- -->
 
 
 
@@ -83,14 +83,14 @@ grid.arrange(pltl + scale_color_jcolors(palette = "default"),
              pltd + scale_color_jcolors(palette = "default"), ncol = 2)
 ```
 
-![](vignettes/unnamed-chunk-3-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
              pltd + scale_color_jcolors(palette = "pal2"), ncol = 2)
 ```
 
-![](vignettes/unnamed-chunk-3-2.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-3-2.png)<!-- -->
 
 Color palettes can be displayed using `display_jcolors()`
 
@@ -100,7 +100,7 @@ Color palettes can be displayed using `display_jcolors()`
 display_jcolors("default")
 ```
 
-![](vignettes/unnamed-chunk-4-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-4-1.png)<!-- -->
 
 ## pal2
 
@@ -108,7 +108,7 @@ display_jcolors("default")
 display_jcolors("pal2")
 ```
 
-![](vignettes/unnamed-chunk-5-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-5-1.png)<!-- -->
 
 ## pal3
 
@@ -116,7 +116,7 @@ display_jcolors("pal2")
 display_jcolors("pal3")
 ```
 
-![](vignettes/unnamed-chunk-6-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-6-1.png)<!-- -->
 
 ## pal4
 
@@ -124,7 +124,7 @@ display_jcolors("pal3")
 display_jcolors("pal4")
 ```
 
-![](vignettes/unnamed-chunk-7-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-7-1.png)<!-- -->
 
 ## pal5
 
@@ -132,7 +132,7 @@ display_jcolors("pal4")
 display_jcolors("pal5")
 ```
 
-![](vignettes/unnamed-chunk-8-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-8-1.png)<!-- -->
 
 ## pal6
 
@@ -140,7 +140,7 @@ display_jcolors("pal5")
 display_jcolors("pal6")
 ```
 
-![](vignettes/unnamed-chunk-9-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-9-1.png)<!-- -->
 
 ## rainbow
 
@@ -148,7 +148,7 @@ display_jcolors("pal6")
 display_jcolors("rainbow")
 ```
 
-![](vignettes/unnamed-chunk-10-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-10-1.png)<!-- -->
 
 ## More example plots
 
@@ -158,7 +158,7 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
              pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
 ```
 
-![](vignettes/moreplots-1.png)<!-- -->
+![](vignettes/readme_figs/moreplots-1.png)<!-- -->
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
@@ -166,14 +166,14 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
                  theme(panel.background = element_rect(fill = "grey5")), ncol = 2)
 ```
 
-![](vignettes/moreplots-2.png)<!-- -->
+![](vignettes/readme_figs/moreplots-2.png)<!-- -->
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal5"),
              pltd + scale_color_jcolors(palette = "pal5"), ncol = 2)
 ```
 
-![](vignettes/moreplots-3.png)<!-- -->
+![](vignettes/readme_figs/moreplots-3.png)<!-- -->
 
 ```r
 pltd <- ggplot(data = OrchardSprays, aes(x = rowpos, y = decrease,
@@ -193,7 +193,7 @@ colour = factor(treatment))) +
 pltd + scale_color_jcolors(palette = "pal6")
 ```
 
-![](vignettes/moreplots-4.png)<!-- -->
+![](vignettes/readme_figs/moreplots-4.png)<!-- -->
 
 
 
@@ -207,7 +207,7 @@ pltd + scale_color_jcolors(palette = "pal6")
 display_all_jcolors_contin()
 ```
 
-![](vignettes/contin_example-1.png)<!-- -->
+![](vignettes/readme_figs/contin_example-1.png)<!-- -->
 
 
 ## Use with `ggplot2`
@@ -223,7 +223,7 @@ plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + t
 grid.arrange(plt2, plt3, ncol = 2)
 ```
 
-![](vignettes/mountain_ex-1.png)<!-- -->
+![](vignettes/readme_figs/mountain_ex-1.png)<!-- -->
 
 
 
