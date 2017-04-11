@@ -125,7 +125,7 @@ jcolors <- function(palette = c("default",
 # display.jcolors
 #' Display jcolors
 #'
-#' Creates different vectors of related colors that may be useful for figures.
+#' displays the discrete jcolors palettes
 #'
 #' @param palette Character string indicating a palette of colors.
 #' @export

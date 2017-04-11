@@ -100,6 +100,72 @@ jcolors_contin <- function(palette = c("default",
 
 
 
+# display.jcolors continuous
+#' Display jcolors_contin
+#'
+#' displays the continuous jcolors palettes
+#'
+#' @param palette Character string indicating a palette of colors.
+#' @export
+#' @examples
+#' display_jcolors_contin()
+display_jcolors_contin <- function(palette = c("default",
+                                               "pal2",
+                                               "pal3",
+                                               "rainbow"))
+{
+    palette <- match.arg(palette)
+    colfunc <- jcolors_contin(palette)
+    jcols   <- colfunc(512L)
+
+    image(1:length(jcols),
+          1, as.matrix(1:length(jcols)),
+          col  = jcols,
+          xlab = "", ylab = "",
+          xaxt = "n", yaxt = "n", bty = "n")
+}
+
+# display.jcolors continuous
+#' Display every jcolors_contin palette
+#'
+#' displays all of the continuous jcolors palettes
+#'
+#' @export
+#' @examples
+#' display_all_jcolors_contin()
+display_all_jcolors_contin <- function()
+{
+    palette <- c("default",
+                 "pal2",
+                 "pal3",
+                 "rainbow")
+    jcols    <- sapply(palette, function(pal) jcolors_contin(pal)(512L))
+    maxlen   <- 512L
+    ncols    <- ncol(jcols)
+
+    lr.margin <- 25
+
+    plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, maxlen + 2 * lr.margin),
+         ylim = c((ncols + 1) * 2, 0), yaxs = "i",
+         xaxt = "n", yaxt = "n", xaxs = "i")
+
+    yseq <- seq(2, ncols * 2, length.out = ncols)
+
+    axis(side = 2, at = yseq, palette, las = 1)
+
+    for (c in 1:ncols)
+    {
+        pal <- jcols[,c]
+        rect(xleft   = lr.margin + seq(along = pal) - 0.5,
+             ybottom = yseq[c] - 0.85,
+             xright  = lr.margin+ seq(along = pal) + 0.5,
+             ytop    = yseq[c] + 0.85,
+             border  = NA,
+             lwd     = 0,
+             col     = pal)
+    }
+}
+
 
 #' continuous jcolors color scales
 #'

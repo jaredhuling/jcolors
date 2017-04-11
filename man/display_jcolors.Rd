@@ -11,7 +11,7 @@ display_jcolors(palette = c("default", "pal2", "pal3", "pal4", "pal5", "pal6",
 \item{palette}{Character string indicating a palette of colors.}
 }
 \description{
-Creates different vectors of related colors that may be useful for figures.
+displays the discrete jcolors palettes
 }
 \examples{
 display_jcolors()
