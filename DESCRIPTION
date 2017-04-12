@@ -4,8 +4,8 @@ Title: Colors palettes for R and 'ggplot2', additional themes for 'ggplot2'
 Version: 0.0.1
 Authors@R: c(person("Jared", "Huling", role = c("aut", "cre"),
     email = "jaredhuling@gmail.com"))
-Description: This package contains a selection of color palettes designed by the package author
-License: GPL-32
+Description: This package contains a selection of color palettes designed by the package author.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Depends:

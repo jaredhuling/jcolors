@@ -20,9 +20,12 @@ minimal theme for dark backgrounds
 minimal theme for light backgrounds
 }
 \examples{
+library(ggplot2)
+
 p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
          colour = factor(gear))) + facet_grid(vs~am)
 p + theme_dark_bg()
+
 
 p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
          colour = factor(gear))) + facet_grid(vs~am)

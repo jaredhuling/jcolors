@@ -79,6 +79,8 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
 #' @export
 #' @rdname theme_jcolors
 #' @examples
+#' library(ggplot2)
+#'
 #' p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
 #'          colour = factor(gear))) + facet_grid(vs~am)
 #' p + theme_dark_bg()
@@ -98,6 +100,7 @@ theme_dark_bg <- function(base_size   = 12,
 #' @rdname theme_jcolors
 #' @import ggplot2
 #' @examples
+#'
 #' p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
 #'          colour = factor(gear))) + facet_grid(vs~am)
 #' p + theme_light_bg()
