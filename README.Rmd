@@ -1,6 +1,7 @@
 ---
 output: 
     html_document:
+        self_contained: false
         toc: true
         keep_md: true
         fig_width: 10
@@ -9,6 +10,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
+knitr::opts_chunk$set(dev = 'pdf')
 ```
 
 # `jcolors` intro 
@@ -215,19 +217,33 @@ p1 <- ggplot(aes(x = clarity, y = price), data = diamonds) +
       geom_point(alpha = 0.25, size = 1, position = "jitter", aes(color = log(carat + 1))) +
       scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
         breaks = c(350, 1000, 5000, 10000, 15000)) +
-      ggtitle('Price (log10) by Carat (log10) and Clarity') + 
-        scale_color_jcolors_contin("pal3", bias = 1.75) +   
-        theme_light_bg()
+      ggtitle('Price (log10) by Carat (log10) and Clarity')
+        
 p2 <- ggplot(aes(x = clarity, y = price), data = diamonds) + 
       geom_point(alpha = 0.25, size = 1, position = "jitter", aes(color = log(carat + 1))) +
       scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
         breaks = c(350, 1000, 5000, 10000, 15000)) +
-      ggtitle('Price (log10) by Carat (log10) and Clarity') + 
-        scale_color_jcolors_contin("rainbow") +   
-        theme_light_bg()
-grid.arrange(p1, p2, ncol = 2)
+      ggtitle('Price (log10) by Carat (log10) and Clarity')
+
+grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_light_bg(),
+             p2 + scale_color_jcolors_contin("rainbow") + theme_light_bg(), ncol = 2)
 ```
 
+
+<style>
+div.dark { background-color: rgb(34,28,54); overflow: auto;}
+</style>
+
+<div class = "dark">
+
+
+```{r darkbg, warning = FALSE}
+grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_dark_bg(),
+             p2 + scale_color_jcolors_contin("rainbow") + theme_dark_bg(), ncol = 2)
+```
+
+
+</div>
 
 
 
