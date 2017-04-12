@@ -41,7 +41,7 @@ jcolors('default')
 display_all_jcolors()
 ```
 
-![](vignettes/readme_figs/displayall-1.pdf)<!-- -->
+![](vignettes/readme_figs/displayall-1.png)<!-- -->
 
 
 
@@ -83,14 +83,14 @@ grid.arrange(pltl + scale_color_jcolors(palette = "default"),
              pltd + scale_color_jcolors(palette = "default"), ncol = 2)
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-3-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
              pltd + scale_color_jcolors(palette = "pal2"), ncol = 2)
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-3-2.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-3-2.png)<!-- -->
 
 Color palettes can be displayed using `display_jcolors()`
 
@@ -100,7 +100,7 @@ Color palettes can be displayed using `display_jcolors()`
 display_jcolors("default")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-4-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-4-1.png)<!-- -->
 
 ## pal2
 
@@ -108,7 +108,7 @@ display_jcolors("default")
 display_jcolors("pal2")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-5-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-5-1.png)<!-- -->
 
 ## pal3
 
@@ -116,7 +116,7 @@ display_jcolors("pal2")
 display_jcolors("pal3")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-6-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-6-1.png)<!-- -->
 
 ## pal4
 
@@ -124,7 +124,7 @@ display_jcolors("pal3")
 display_jcolors("pal4")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-7-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-7-1.png)<!-- -->
 
 ## pal5
 
@@ -132,7 +132,7 @@ display_jcolors("pal4")
 display_jcolors("pal5")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-8-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-8-1.png)<!-- -->
 
 ## pal6
 
@@ -140,7 +140,7 @@ display_jcolors("pal5")
 display_jcolors("pal6")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-9-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-9-1.png)<!-- -->
 
 ## rainbow
 
@@ -148,7 +148,7 @@ display_jcolors("pal6")
 display_jcolors("rainbow")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-10-1.pdf)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-10-1.png)<!-- -->
 
 ## More example plots
 
@@ -158,7 +158,7 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
              pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
 ```
 
-![](vignettes/readme_figs/moreplots-1.pdf)<!-- -->
+![](vignettes/readme_figs/moreplots-1.png)<!-- -->
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
@@ -166,14 +166,14 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal4"),
                  theme(panel.background = element_rect(fill = "grey5")), ncol = 2)
 ```
 
-![](vignettes/readme_figs/moreplots-2.pdf)<!-- -->
+![](vignettes/readme_figs/moreplots-2.png)<!-- -->
 
 ```r
 grid.arrange(pltl + scale_color_jcolors(palette = "pal5"),
              pltd + scale_color_jcolors(palette = "pal5"), ncol = 2)
 ```
 
-![](vignettes/readme_figs/moreplots-3.pdf)<!-- -->
+![](vignettes/readme_figs/moreplots-3.png)<!-- -->
 
 ```r
 pltd <- ggplot(data = OrchardSprays, aes(x = rowpos, y = decrease,
@@ -193,7 +193,7 @@ colour = factor(treatment))) +
 pltd + scale_color_jcolors(palette = "pal6")
 ```
 
-![](vignettes/readme_figs/moreplots-4.pdf)<!-- -->
+![](vignettes/readme_figs/moreplots-4.png)<!-- -->
 
 
 
@@ -207,7 +207,7 @@ pltd + scale_color_jcolors(palette = "pal6")
 display_all_jcolors_contin()
 ```
 
-![](vignettes/readme_figs/contin_example-1.pdf)<!-- -->
+![](vignettes/readme_figs/contin_example-1.png)<!-- -->
 
 
 ## Use with `ggplot2`
@@ -223,7 +223,7 @@ plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + t
 grid.arrange(plt2, plt3, ncol = 2)
 ```
 
-![](vignettes/readme_figs/mountain_ex-1.pdf)<!-- -->
+![](vignettes/readme_figs/mountain_ex-1.png)<!-- -->
 
 # `ggplot2` themes
 
@@ -255,7 +255,7 @@ p2 <- ggplot(aes(x = carat, y = price), data = diamonds) +
 grid.arrange(p1, p2, ncol = 2)
 ```
 
-![](vignettes/readme_figs/diamonds_light_theme-1.pdf)<!-- -->
+![](vignettes/readme_figs/diamonds_light_theme-1.png)<!-- -->
 
 
 ```r
@@ -275,15 +275,10 @@ grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_light_
              p2 + scale_color_jcolors_contin("rainbow") + theme_light_bg(), ncol = 2)
 ```
 
-![](vignettes/readme_figs/jitterplot-1.pdf)<!-- -->
+![](vignettes/readme_figs/jitterplot-1.png)<!-- -->
 
 
-<style>
-div.dark { background-color: rgb(34,28,54); overflow: auto;}
-</style>
-
-<div class = "dark">
-
+If the background here were dark, then this would look nice:
 
 
 ```r
@@ -291,10 +286,8 @@ grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_dark_b
              p2 + scale_color_jcolors_contin("rainbow") + theme_dark_bg(), ncol = 2)
 ```
 
-![](vignettes/readme_figs/darkbg-1.pdf)<!-- -->
+![](vignettes/readme_figs/darkbg-1.png)<!-- -->
 
-
-</div>
 
 
 

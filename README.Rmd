@@ -1,7 +1,6 @@
 ---
 output: 
     html_document:
-        self_contained: false
         toc: true
         keep_md: true
         fig_width: 10
@@ -10,7 +9,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
-knitr::opts_chunk$set(dev = 'pdf')
 ```
 
 # `jcolors` intro 
@@ -230,20 +228,13 @@ grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_light_
 ```
 
 
-<style>
-div.dark { background-color: rgb(34,28,54); overflow: auto;}
-</style>
-
-<div class = "dark">
-
+If the background here were dark, then this would look nice:
 
 ```{r darkbg, warning = FALSE}
 grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_dark_bg(),
              p2 + scale_color_jcolors_contin("rainbow") + theme_dark_bg(), ncol = 2)
 ```
 
-
-</div>
 
 
 
