@@ -51,7 +51,8 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
           legend.justification = "center",
           legend.box = "vertical",
                                 ## plotting region
-          panel.background = element_rect(fill = alpha('grey80', 0.05)),
+          panel.background = element_rect(fill     = alpha('grey80', 0.05),
+                                          linetype = 0),
           panel.border     = element_blank(),
           panel.grid.major = element_line(colour = "grey50", size = 0.35),
           panel.grid.minor = element_line(colour = "grey30", size = 0.2),
@@ -114,8 +115,7 @@ theme_light_bg <- function(base_size  = 12,
             line             = element_line(colour = "grey10"),
             rect             = element_rect(colour = "grey10"),
             text             = element_text(colour = "grey10"),
-            panel.background = element_rect(fill     = alpha('grey90', 0.075),
-                                            linetype = 0),
+            panel.background = element_rect(fill     = alpha('grey90', 0.075)),
             panel.grid.major = element_line(colour = "grey90", size = 0.35),
             panel.grid.minor = element_line(colour = "grey98", size = 0.2)
         )
