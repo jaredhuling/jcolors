@@ -3,9 +3,7 @@ Type: Package
 Title: Colors palettes for R and 'ggplot2', additional themes for 'ggplot2' 
 Version: 0.0.1
 Authors@R: c(person("Jared", "Huling", role = c("aut", "cre"),
-    email = "jaredhuling@gmail.com"),
-    person("Jeffrey B.", "Arnold", role = c("ctb"),
-    comment = "Code from the ggthemes package."))
+    email = "jaredhuling@gmail.com"))
 Description: This package contains a selection of color palettes designed by the package author
 License: GPL-32
 Encoding: UTF-8
@@ -15,7 +13,7 @@ Depends:
 Imports:
     grDevices,
     scales,
-    ggplot2 (>= 2.0.0)
+    ggplot2 (>= 2.2.0)
 RoxygenNote: 5.0.1
 Suggests: 
     knitr,

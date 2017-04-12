@@ -1,30 +1,4 @@
 
-# copied from ggthemes
-theme_constructor <- function(base_size   = 12,
-                              base_family = "")
-{
-    thm <- theme_bw(base_size   = base_size,
-                    base_family = base_family)
-    for (i in names(thm))
-    {
-        if ("colour" %in% names(thm[[i]]))
-        {
-            thm[[i]]["colour"] <- list(NULL)
-        }
-        if ("fill" %in% names(thm[[i]]))
-        {
-            thm[[i]]["fill"] <- list(NULL)
-        }
-    }
-    thm + theme(panel.border      = element_rect(fill   = NA),
-                legend.background = element_rect(colour = NA),
-                line              = element_line(colour = "black"),
-                rect              = element_rect(fill   = "white",
-                                                 colour = "black"),
-                text              = element_text(colour = "black"))
-}
-
-
 theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
 {
     relsize <- sapply(as.numeric(size_list), `/`,
@@ -122,6 +96,7 @@ theme_dark_bg <- function(base_size   = 12,
 #' @inheritParams ggplot2::theme_bw
 #' @export
 #' @rdname theme_jcolors
+#' @import ggplot2
 #' @examples
 #' p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
 #'          colour = factor(gear))) + facet_grid(vs~am)

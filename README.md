@@ -276,12 +276,6 @@ p2 <- ggplot(aes(x = clarity, y = price), data = diamonds) +
 grid.arrange(p1, p2, ncol = 2)
 ```
 
-```
-## Warning: Removed 1672 rows containing missing values (geom_point).
-
-## Warning: Removed 1672 rows containing missing values (geom_point).
-```
-
 ![](vignettes/readme_figs/jitterplot-1.png)<!-- -->
 
 
