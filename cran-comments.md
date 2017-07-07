@@ -2,6 +2,7 @@
 ## First submission for 'jcolors'
 
 * First CRAN submission for 'jcolors' package
+* Fixes title case issue 
 
 ## Test environments
 
