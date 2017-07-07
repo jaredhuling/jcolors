@@ -37,4 +37,3 @@ image(1:n, 1, as.matrix(1:n),
       xaxt = "n", yaxt = "n", bty = "n")
 
 }
-

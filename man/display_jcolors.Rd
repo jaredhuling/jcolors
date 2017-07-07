@@ -16,4 +16,3 @@ displays the discrete jcolors palettes
 \examples{
 display_jcolors()
 }
-

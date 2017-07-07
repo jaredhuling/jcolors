@@ -32,4 +32,3 @@ p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
 p + theme_light_bg()
 
 }
-

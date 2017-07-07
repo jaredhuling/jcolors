@@ -15,4 +15,3 @@ displays the continuous jcolors palettes
 \examples{
 display_jcolors_contin()
 }
-

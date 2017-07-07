@@ -12,4 +12,3 @@ displays all of the continuous jcolors palettes
 \examples{
 display_all_jcolors_contin()
 }
-
