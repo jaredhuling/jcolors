@@ -1,7 +1,7 @@
 Package: jcolors
 Type: Package
 Title: Colors Palettes for R and 'ggplot2', Additional Themes for 'ggplot2' 
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(person("Jared", "Huling", role = c("aut", "cre"),
     email = "jaredhuling@gmail.com"))
 Description: Contains a selection of color palettes and 'ggplot2' themes designed by the package author.

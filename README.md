@@ -3,6 +3,7 @@
 
 # `jcolors` intro 
 
+[![version](http://www.r-pkg.org/badges/version/jcolors)](https://cran.r-project.org/package=jcolors)
 [![Build Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
 
 `jcolors` contains a selection of `ggplot2` color palettes that I like
@@ -221,6 +222,16 @@ plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y =
 plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
 plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
 grid.arrange(plt2, plt3, ncol = 2)
+```
+
+```
+## Warning: Computation failed in `stat_binhex()`:
+## Package `hexbin` required for `stat_binhex`.
+## Please install and try again.
+
+## Warning: Computation failed in `stat_binhex()`:
+## Package `hexbin` required for `stat_binhex`.
+## Please install and try again.
 ```
 
 ![](vignettes/readme_figs/mountain_ex-1.png)<!-- -->
