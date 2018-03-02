@@ -1,11 +1,7 @@
 ---
-output: 
-    html_document:
-        toc: true
-        keep_md: true
-        fig_width: 10
-        fig_height: 5
+output: github_document
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
@@ -16,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
 [![version](http://www.r-pkg.org/badges/version/jcolors)](https://cran.r-project.org/package=jcolors)
 [![Build Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
 
-`jcolors` contains a selection of `ggplot2` color palettes that I like
+`jcolors` contains a selection of `ggplot2` color palettes that I like (or can at least tolerate to some degree)
 
 ## Installation
 
@@ -118,6 +114,16 @@ display_jcolors("pal5")
 ## pal6
 ```{r}
 display_jcolors("pal6")
+```
+
+## pal7
+```{r}
+display_jcolors("pal7")
+```
+
+## pal8
+```{r}
+display_jcolors("pal8")
 ```
 
 ## rainbow

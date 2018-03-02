@@ -17,7 +17,7 @@ vignette: >
 
 [![Build Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
 
-`jcolors` contains a selection of `ggplot2` color palettes that I like
+`jcolors` contains a selection of `ggplot2` color palettes that I like (or can at least tolerate to some degree)
 
 ## Installation
 
