@@ -27,6 +27,10 @@ jcolors <- function(palette = c("default",
                                 "pal6",
                                 "pal7",
                                 "pal8",
+                                "pal9",
+                                "pal10",
+                                "pal11",
+                                "pal12",
                                 "rainbow"))
 {
 
@@ -126,6 +130,51 @@ jcolors <- function(palette = c("default",
               "very_soft_magenta"           = "#D590DA",
               "dark_moderate_orange"        = "#995533")
 
+    pal9 <- c("#273B5B",
+              "#C1C243",
+              "#2E6657",
+              "#E8F5B3",
+              "#E73E26",
+              "#24A99C")
+
+    pal10 <- c('#3e71a8',
+               '#577f9f',
+               '#698e96',
+               '#779d8d',
+               '#84ad83',
+               '#8fbd77',
+               '#99cd6b',
+               '#a2dd5c',
+               '#aaee49',
+               '#b2ff2e')
+
+    pal11 <- c('#202547',
+               '#323649',
+               '#41474b',
+               '#4e5a4c',
+               '#5c6c4c',
+               '#68804c',
+               '#75944b',
+               '#81a949',
+               '#8ebe45',
+               '#9ad340',
+               '#a6e939',
+               '#b2ff2e')
+
+    pal12 <- c('#202547',
+               '#43444a',
+               '#5f654a',
+               '#7b8948',
+               '#97b043',
+               '#b2d736',
+               '#ceff1a',
+               '#d8e01b',
+               '#dfc11b',
+               '#e2a11b',
+               '#e37f1b',
+               '#e1581a',
+               '#de1a1a')
+
     rainbow <- c('rosso_corsa'          = "#D12600",
                  'spanish_orange'       = "#DB6A00",
                  'green_yellow'         = "#B2FF2E",
@@ -155,6 +204,10 @@ jcolors <- function(palette = c("default",
            pal6    = pal6,
            pal7    = pal7,
            pal8    = pal8,
+           pal9    = pal9,
+           pal10   = pal10,
+           pal11   = pal11,
+           pal12   = pal12,
            rainbow = rainbow,
            earthen = earthen)
 }
@@ -181,6 +234,10 @@ display_jcolors <- function(palette = c("default",
                                         "pal6",
                                         "pal7",
                                         "pal8",
+                                        "pal9",
+                                        "pal10",
+                                        "pal11",
+                                        "pal12",
                                         "rainbow"))
 {
     palette <- match.arg(palette)
@@ -218,6 +275,10 @@ display_all_jcolors <- function()
                  "pal6",
                  "pal7",
                  "pal8",
+                 "pal9",
+                 "pal10",
+                 "pal11",
+                 "pal12",
                  "rainbow")
     jcols    <- sapply(palette, jcolors)
     maxlen   <- max(sapply(jcols, length))
@@ -292,6 +353,10 @@ scale_color_jcolors = function (palette = c("default",
                                             "pal6",
                                             "pal7",
                                             "pal8",
+                                            "pal9",
+                                            "pal10",
+                                            "pal11",
+                                            "pal12",
                                             "rainbow"),
                                 ...)
 {
@@ -318,6 +383,10 @@ scale_fill_jcolors = function (palette = c("default",
                                            "pal6",
                                            "pal7",
                                            "pal8",
+                                           "pal9",
+                                           "pal10",
+                                           "pal11",
+                                           "pal12",
                                            "rainbow"),
                                ...)
 {
