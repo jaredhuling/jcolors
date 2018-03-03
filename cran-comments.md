@@ -1,14 +1,13 @@
 
 ## First submission for 'jcolors'
 
-* First CRAN submission for 'jcolors' package
-* Fixes title case issue 
+* Added more palettes
 
 ## Test environments
 
-* local Windows 7 x64 install, (R 3.4.1, R 3.4, 2017-07-03 r72876 R-devel)
-* Ubuntu 12.04.5 LTS (on travis-ci), (R 3.4, R-patch)
-* OSX (on travis-ci), (R 3.4)
+* local Windows 7 x64 install, (R 3.4.3, R-devel)
+* Ubuntu 14.04 LTS (on travis-ci), (R 3.4.3, R-patch)
+* OSX (on travis-ci), (R 3.4.3)
 
 ## R CMD check results
 
