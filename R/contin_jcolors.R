@@ -27,6 +27,10 @@
 jcolors_contin <- function(palette = c("default",
                                        "pal2",
                                        "pal3",
+                                       "pal4",
+                                       "pal10",
+                                       "pal11",
+                                       "pal12",
                                        "rainbow"),
                            reverse = FALSE,
                            interpolate = c("spline", "linear"),
@@ -91,10 +95,84 @@ jcolors_contin <- function(palette = c("default",
                                      interpolate = interpolate,
                                      ...)
 
+    pal4 <- c('yankees_blue'   = "#202547",
+              'purple_taupe'   = "#53354A",
+              'deep_taupe'     = "#7A6C5D",
+              'raspberry'      = "#BE3144",
+              'mango'          = "#FF7844",
+              'straw'          = "#E3D26F")
+
+    pal10 <- c('#3e71a8',
+               '#577f9f',
+               '#698e96',
+               '#779d8d',
+               '#84ad83',
+               '#8fbd77',
+               '#99cd6b',
+               '#a2dd5c',
+               '#aaee49',
+               '#b2ff2e')
+
+    pal11 <- c('#202547',
+               '#323649',
+               '#41474b',
+               '#4e5a4c',
+               '#5c6c4c',
+               '#68804c',
+               '#75944b',
+               '#81a949',
+               '#8ebe45',
+               '#9ad340',
+               '#a6e939',
+               '#b2ff2e')
+
+    pal12 <- c('#202547',
+               '#43444a',
+               '#5f654a',
+               '#7b8948',
+               '#97b043',
+               '#b2d736',
+               '#ceff1a',
+               '#d8e01b',
+               '#dfc11b',
+               '#e2a11b',
+               '#e37f1b',
+               '#e1581a',
+               '#de1a1a')
+
+    if (reverse) pal4 <- rev(pal4)
+
+    pal4.func <- colorRampPalette(pal4,
+                                   interpolate = interpolate,
+                                   ...)
+
+    if (reverse) pal10 <- rev(pal10)
+
+    pal10.func <- colorRampPalette(pal10,
+                                  interpolate = interpolate,
+                                  ...)
+
+    if (reverse) pal11 <- rev(pal11)
+
+    pal11.func <- colorRampPalette(pal11,
+                                  interpolate = interpolate,
+                                  ...)
+
+    if (reverse) pal12 <- rev(pal12)
+
+    pal12.func <- colorRampPalette(pal12,
+                                  interpolate = interpolate,
+                                  ...)
+
+
     switch(match.arg(palette),
            default = default.func,
            pal2    = pal2.func,
            pal3    = pal3.func,
+           pal4    = pal4.func,
+           pal10   = pal10.func,
+           pal11   = pal11.func,
+           pal12   = pal12.func,
            rainbow = rainbow.func)
 }
 
@@ -112,6 +190,10 @@ jcolors_contin <- function(palette = c("default",
 display_jcolors_contin <- function(palette = c("default",
                                                "pal2",
                                                "pal3",
+                                               "pal4",
+                                               "pal10",
+                                               "pal11",
+                                               "pal12",
                                                "rainbow"))
 {
     palette <- match.arg(palette)
@@ -138,6 +220,10 @@ display_all_jcolors_contin <- function()
     palette <- c("default",
                  "pal2",
                  "pal3",
+                 "pal4",
+                 "pal10",
+                 "pal11",
+                 "pal12",
                  "rainbow")
     jcols    <- sapply(palette, function(pal) jcolors_contin(pal)(512L))
     maxlen   <- 512L
@@ -191,6 +277,10 @@ display_all_jcolors_contin <- function()
 scale_color_jcolors_contin = function (palette = c("default",
                                                    "pal2",
                                                    "pal3",
+                                                   "pal4",
+                                                   "pal10",
+                                                   "pal11",
+                                                   "pal12",
                                                    "rainbow"),
                                        ...)
 {
@@ -214,6 +304,10 @@ scale_colour_jcolors_contin = scale_color_jcolors_contin
 scale_fill_jcolors_contin = function (palette = c("default",
                                                   "pal2",
                                                   "pal3",
+                                                  "pal4",
+                                                  "pal10",
+                                                  "pal11",
+                                                  "pal12",
                                                   "rainbow"),
                                       ...)
 {

@@ -96,36 +96,6 @@ Color palettes can be displayed using `display_jcolors()`
 display_jcolors("default")
 ```
 
-## pal2
-```{r}
-display_jcolors("pal2")
-```
-
-## pal3
-```{r}
-display_jcolors("pal3")
-```
-
-## pal4
-```{r}
-display_jcolors("pal4")
-```
-
-## pal5
-```{r}
-display_jcolors("pal5")
-```
-
-## pal6
-```{r}
-display_jcolors("pal6")
-```
-
-## rainbow
-```{r}
-display_jcolors("rainbow")
-```
-
 ## More example plots
 
 ```{r moreplots}

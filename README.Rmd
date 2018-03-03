@@ -126,6 +126,26 @@ display_jcolors("pal7")
 display_jcolors("pal8")
 ```
 
+## pal9
+```{r}
+display_jcolors("pal9")
+```
+
+## pal10
+```{r}
+display_jcolors("pal10")
+```
+
+## pal11
+```{r}
+display_jcolors("pal11")
+```
+
+## pal12
+```{r}
+display_jcolors("pal12")
+```
+
 ## rainbow
 ```{r}
 display_jcolors("rainbow")
@@ -184,7 +204,8 @@ plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y =
 
 plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
 plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
-grid.arrange(plt2, plt3, ncol = 2)
+plt4 <- plt + scale_fill_jcolors_contin("pal12", reverse = TRUE, bias = 2) + theme_bw()
+grid.arrange(plt2, plt3, plt4, ncol = 2)
 ```
 
 # `ggplot2` themes

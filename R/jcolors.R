@@ -102,17 +102,17 @@ jcolors <- function(palette = c("default",
     pal6 <- c('rackley'          = "#558aa6",
               'dark_goldenrod'   = "#B1740F",
               'rubine_red'       = "#D5006A",
-              'dark_orchid'      = "#9449d2",
-              'canary'           = "#FFFD98",
               'midnight_green'   = "#08585A",
-              'rusty_red'        = "#D7263D",
-              'dark_khaki'       = "#BBBE64")
+              'canary'           = "#FFFD98",
+              'dark_orchid'      = "#9449d2",
+              'dark_khaki'       = "#BBBE64",
+              'rusty_red'        = "#D7263D")
 
-    pal7 <- c("very_dark_mostly_black_blue" = "#101D2E",
+    pal7 <- c("very_dark_blue" = "#1d3554", #"#101D2E",
               "very_soft_yellow"            = "#DFE07C",
               "dark_moderate_yellow"        = "#7F8E39",
-              "vivid_orange"                = "#E48F1B",
               "dark_moderate_cyan"          = "#42858C",
+              "vivid_orange"                = "#E48F1B",
               "very_dark_pink"              = "#570D32",
               "vivid_yellow"                = "#E5C616",
               "moderate_red"                = "#D33B44")
@@ -122,19 +122,19 @@ jcolors <- function(palette = c("default",
               "slightly_desaturated_yellow" = "#C6CF6E",
               "moderate_blue"               = "#5B6DC8",
               "dark_moderate_lime_green"    = "#3CA437",
-              'maximum_red'                 = "#DE1A1A",
               "very_dark_pink"              = "#6B244C",
               "slightly_desaturated_cyan"   = "#6ACDC5",
+              'maximum_red'                 = "#DE1A1A",
               "moderate_yellow"             = "#BBB53E",
               "dark_moderate_blue"          = "#2A297A",
-              "very_soft_magenta"           = "#D590DA",
-              "dark_moderate_orange"        = "#995533")
+              "dark_moderate_orange"        = "#995533",
+              "very_soft_magenta"           = "#D590DA")
 
     pal9 <- c("#273B5B",
               "#C1C243",
+              "#E73E26",
               "#2E6657",
               "#E8F5B3",
-              "#E73E26",
               "#24A99C")
 
     pal10 <- c('#3e71a8',

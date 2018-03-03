@@ -150,13 +150,45 @@ display_jcolors("pal8")
 
 ![](vignettes/readme_figs/unnamed-chunk-11-1.png)<!-- -->
 
+## pal9
+
+``` r
+display_jcolors("pal9")
+```
+
+![](vignettes/readme_figs/unnamed-chunk-12-1.png)<!-- -->
+
+## pal10
+
+``` r
+display_jcolors("pal10")
+```
+
+![](vignettes/readme_figs/unnamed-chunk-13-1.png)<!-- -->
+
+## pal11
+
+``` r
+display_jcolors("pal11")
+```
+
+![](vignettes/readme_figs/unnamed-chunk-14-1.png)<!-- -->
+
+## pal12
+
+``` r
+display_jcolors("pal12")
+```
+
+![](vignettes/readme_figs/unnamed-chunk-15-1.png)<!-- -->
+
 ## rainbow
 
 ``` r
 display_jcolors("rainbow")
 ```
 
-![](vignettes/readme_figs/unnamed-chunk-12-1.png)<!-- -->
+![](vignettes/readme_figs/unnamed-chunk-16-1.png)<!-- -->
 
 ## More example plots
 
@@ -221,7 +253,8 @@ plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y =
 
 plt2 <- plt + scale_fill_jcolors_contin("pal2", bias = 1.75) + theme_bw()
 plt3 <- plt + scale_fill_jcolors_contin("pal3", reverse = TRUE, bias = 2.25) + theme_bw()
-grid.arrange(plt2, plt3, ncol = 2)
+plt4 <- plt + scale_fill_jcolors_contin("pal12", reverse = TRUE, bias = 2) + theme_bw()
+grid.arrange(plt2, plt3, plt4, ncol = 2)
 ```
 
 ![](vignettes/readme_figs/mountain_ex-1.png)<!-- -->
