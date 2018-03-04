@@ -32,11 +32,21 @@ jcolors('default')
 
 ## Display all available palettes
 
+### Discrete palettes
+
 ``` r
 display_all_jcolors()
 ```
 
 ![](vignettes/readme_figs/displayall-1.png)<!-- -->
+
+### Continuous palettes
+
+``` r
+display_all_jcolors_contin()
+```
+
+![](vignettes/readme_figs/contin_example_display-1.png)<!-- -->
 
 # Discrete Color Palettes
 

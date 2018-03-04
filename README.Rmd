@@ -35,11 +35,15 @@ jcolors('default')
 
 ## Display all available palettes
 
+### Discrete palettes
 ```{r displayall, fig.height = 8}
 display_all_jcolors()
 ```
 
-
+### Continuous palettes
+```{r contin_example_display, fig.height = 8}
+display_all_jcolors_contin()
+```
 
 # Discrete Color Palettes
 
