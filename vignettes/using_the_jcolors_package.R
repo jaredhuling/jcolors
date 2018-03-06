@@ -8,8 +8,11 @@ library(jcolors)
 jcolors('default')
 
 
-## ----displayall, fig.height = 5------------------------------------------
+## ----displayall, fig.height = 8------------------------------------------
 display_all_jcolors()
+
+## ----contin_example_display, fig.height = 8------------------------------
+display_all_jcolors_contin()
 
 ## ----eval = TRUE, message = FALSE, warning = FALSE-----------------------
 library(ggplot2)

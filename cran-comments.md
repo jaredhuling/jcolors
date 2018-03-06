@@ -1,5 +1,5 @@
 
-## First submission for 'jcolors'
+## New submission for 'jcolors'
 
 * Added more palettes
 
