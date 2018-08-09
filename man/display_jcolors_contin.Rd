@@ -4,8 +4,8 @@
 \alias{display_jcolors_contin}
 \title{Display jcolors_contin}
 \usage{
-display_jcolors_contin(palette = c("default", "pal2", "pal3", "pal4", "pal10",
-  "pal11", "pal12", "rainbow"))
+display_jcolors_contin(palette = c("default", "pal2", "pal3", "pal4",
+  "pal10", "pal11", "pal12", "rainbow"))
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}

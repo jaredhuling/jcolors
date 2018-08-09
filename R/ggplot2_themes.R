@@ -1,5 +1,7 @@
 
-theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
+theme_dark_bg_base <- function(base_size = 12, base_family = "sans",
+                               base_line_size = base_size / 22,
+                               base_rect_size = base_size / 22)
 {
     relsize <- sapply(as.numeric(size_list), `/`,
                       y = as.numeric(size_list$normalsize))
@@ -7,11 +9,11 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
 
     half_line <- base_size * 0.5
 
-    theme(line = element_line(size     = 0.5,
+    theme(line = element_line(size     = base_line_size,
                               linetype = 1,
                               lineend  = "butt",
                               colour   = "grey80"),
-          rect = element_rect(size     = 0.5,
+          rect = element_rect(size     = base_rect_size,
                               linetype = 1,
                               fill     = NA,
                               colour   = "grey80"),
@@ -34,6 +36,7 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
           axis.title.x         = element_text(margin = margin((10/6) * half_line,0,0,0)),
           axis.title.y         = element_text(angle  = 90,
                                               margin = margin(0,(10/6) * half_line,0,0)),
+          axis.ticks.length    =  unit(half_line / 2, "pt"),
                                 ##  Legend
           legend.background    = element_blank(),
           legend.spacing       = unit(1.2 / 100, "npc"),
@@ -56,19 +59,39 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
           panel.border     = element_blank(),
           panel.grid.major = element_line(colour = "grey50", size = 0.35),
           panel.grid.minor = element_line(colour = "grey30", size = 0.2),
+          panel.spacing    = unit(half_line, "pt"),
+          panel.spacing.x  = NULL,
+          panel.spacing.y  = NULL,
+          panel.ontop      = FALSE,
                                 ## facetting options
           strip.background  = element_blank(),
-          strip.placement   =    "inside",
-          strip.placement.x =  NULL,
-          strip.placement.y =  NULL,
           strip.text        = element_text(size = rel(relsize["large"])),
           strip.text.x      = element_text(margin = margin(0, 0, (5/6) * half_line, 0)),
           strip.text.y      = element_text(angle  = -90,
                                            margin = margin(0, half_line, 0, (5/6) * half_line )),
+          strip.placement   = "inside",
+          strip.placement.x = NULL,
+          strip.placement.y = NULL,
+          strip.switch.pad.grid = unit(half_line / 2, "pt"),
+          strip.switch.pad.wrap = unit(half_line / 2, "pt"),
           plot.background   = element_blank(),
           plot.title = element_text(size   = rel(relsize["Large"]),
                                     hjust  = 0.5,
                                     margin = margin(0,0,5,0)),
+          plot.subtitle =      element_text( # font size "regular"
+              hjust = 0, vjust = 1,
+              margin = margin(b = half_line)
+          ),
+          plot.caption =       element_text( # font size "small"
+              size = rel(0.8),
+              hjust = 1, vjust = 1,
+              margin = margin(t = half_line)
+          ),
+          plot.tag =           element_text(
+              size = rel(1.2),
+              hjust = 0.5, vjust = 0.5
+          ),
+          plot.tag.position =  'topleft',
           plot.margin       = margin(half_line, half_line, half_line, half_line),
           complete = TRUE)
 }
@@ -87,10 +110,14 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans")
 #' p + theme_dark_bg()
 #'
 theme_dark_bg <- function(base_size   = 12,
-                          base_family = "sans")
+                          base_family = "sans",
+                          base_line_size = base_size / 22,
+                          base_rect_size = base_size / 22)
 {
-    theme_dark_bg_base(base_size   = eval(base_size),
-                       base_family = base_family)
+    theme_dark_bg_base(base_size      = eval(base_size),
+                       base_family    = base_family,
+                       base_line_size = base_line_size,
+                       base_rect_size = base_rect_size)
 }
 
 
@@ -107,10 +134,14 @@ theme_dark_bg <- function(base_size   = 12,
 #' p + theme_light_bg()
 #'
 theme_light_bg <- function(base_size  = 12,
-                          base_family = "sans")
+                           base_family = "sans",
+                           base_line_size = base_size / 22,
+                           base_rect_size = base_size / 22)
 {
-    theme_dark_bg_base(base_size   = eval(base_size),
-                       base_family = base_family) +
+    theme_dark_bg_base(base_size      = eval(base_size),
+                       base_family    = base_family,
+                       base_line_size = base_line_size,
+                       base_rect_size = base_rect_size) +
         theme(
             line             = element_line(colour = "grey10"),
             rect             = element_rect(colour = "grey10"),

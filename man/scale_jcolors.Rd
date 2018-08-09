@@ -12,20 +12,23 @@
 scale_color_jcolors_contin(palette = c("default", "pal2", "pal3", "pal4",
   "pal10", "pal11", "pal12", "rainbow"), ...)
 
-scale_colour_jcolors_contin(palette = c("default", "pal2", "pal3", "pal4",
-  "pal10", "pal11", "pal12", "rainbow"), ...)
+scale_colour_jcolors_contin(palette = c("default", "pal2", "pal3",
+  "pal4", "pal10", "pal11", "pal12", "rainbow"), ...)
 
 scale_fill_jcolors_contin(palette = c("default", "pal2", "pal3", "pal4",
   "pal10", "pal11", "pal12", "rainbow"), ...)
 
-scale_color_jcolors(palette = c("default", "pal2", "pal3", "pal4", "pal5",
-  "pal6", "pal7", "pal8", "pal9", "pal10", "pal11", "pal12", "rainbow"), ...)
+scale_color_jcolors(palette = c("default", "pal2", "pal3", "pal4",
+  "pal5", "pal6", "pal7", "pal8", "pal9", "pal10", "pal11", "pal12",
+  "rainbow"), ...)
 
-scale_colour_jcolors(palette = c("default", "pal2", "pal3", "pal4", "pal5",
-  "pal6", "pal7", "pal8", "pal9", "pal10", "pal11", "pal12", "rainbow"), ...)
+scale_colour_jcolors(palette = c("default", "pal2", "pal3", "pal4",
+  "pal5", "pal6", "pal7", "pal8", "pal9", "pal10", "pal11", "pal12",
+  "rainbow"), ...)
 
 scale_fill_jcolors(palette = c("default", "pal2", "pal3", "pal4", "pal5",
-  "pal6", "pal7", "pal8", "pal9", "pal10", "pal11", "pal12", "rainbow"), ...)
+  "pal6", "pal7", "pal8", "pal9", "pal10", "pal11", "pal12", "rainbow"),
+  ...)
 }
 \arguments{
 \item{palette}{Character string indicating a palette of colors.}
