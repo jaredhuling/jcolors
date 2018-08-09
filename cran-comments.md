@@ -1,13 +1,12 @@
 
 ## New submission for 'jcolors'
 
-* Added more palettes
+* Fixes CRAN check errors induced by new version of ggplot2
 
 ## Test environments
 
-* local Windows 7 x64 install, (R 3.4.3, R-devel)
-* Ubuntu 14.04 LTS (on travis-ci), (R 3.4.3, R-patch)
-* OSX (on travis-ci), (R 3.4.3)
+* Ubuntu 14.04.5 LTS (on travis-ci), (R 3.5.0, R-patch)
+* macOS (R 3.5.0 on travis-ci macOS High Sierra 10.13.3, R 3.5.1 Sierra local, R devel)
 
 ## R CMD check results
 
