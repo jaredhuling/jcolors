@@ -3,7 +3,7 @@ Type: Package
 Title: Colors Palettes for R and 'ggplot2', Additional Themes for 'ggplot2' 
 Version: 0.0.4
 Authors@R: c(person("Jared", "Huling", role = c("aut", "cre"),
-    email = "jaredhuling@gmail.com"), comment = c(ORCID = "0000-0003-0670-4845"))
+    email = "jaredhuling@gmail.com", comment = c(ORCID = "0000-0003-0670-4845")))
 Description: Contains a selection of color palettes and 'ggplot2' themes designed by the package author.
 URL: https://jaredhuling.github.io/jcolors/
 BugReports: https://github.com/jaredhuling/jcolors/issues
