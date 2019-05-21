@@ -1,4 +1,5 @@
 
+#' @importFrom ggplot2 %+replace%
 theme_dark_bg_base <- function(base_size = 12, base_family = "sans",
                                base_line_size = base_size / 22,
                                base_rect_size = base_size / 22)
@@ -9,7 +10,13 @@ theme_dark_bg_base <- function(base_size = 12, base_family = "sans",
 
     half_line <- base_size * 0.5
 
-    theme(line = element_line(size     = base_line_size,
+    ggplot2::theme_grey(
+        base_size = base_size,
+        base_family = base_family,
+        base_line_size = base_line_size,
+        base_rect_size = base_rect_size
+    ) %+replace%
+        ggplot2::theme(line = element_line(size     = base_line_size,
                               linetype = 1,
                               lineend  = "butt",
                               colour   = "grey80"),
