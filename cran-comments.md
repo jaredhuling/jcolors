@@ -5,8 +5,9 @@
 
 ## Test environments
 
-* Ubuntu 14.04.5 LTS (on travis-ci), (R 3.5.0, R-patch)
-* macOS (R 3.5.0 on travis-ci macOS High Sierra 10.13.3, R 3.5.1 Sierra local, R devel)
+* Debian Linux, (R-devel, 2019-05-12 r76488)
+* local Mac OSX Sierra (R 3.6.0)
+* Ubuntu 14.04.5 LTS (on travis-ci), (R 3.6.0)
 
 ## R CMD check results
 
