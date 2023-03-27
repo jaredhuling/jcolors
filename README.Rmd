@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
 # `jcolors` intro 
 
 [![version](http://www.r-pkg.org/badges/version/jcolors)](https://cran.r-project.org/package=jcolors)
-[![Build Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
+[![Build Status](https://api.travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/github/jaredhuling/jcolors)
 
 `jcolors` contains a selection of `ggplot2` color palettes that I like (or can at least tolerate to some degree)
 
