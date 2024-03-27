@@ -2,8 +2,6 @@
 # `jcolors` intro
 
 [![version](http://www.r-pkg.org/badges/version/jcolors)](https://cran.r-project.org/package=jcolors)
-[![Build
-Status](https://travis-ci.org/jaredhuling/jcolors.svg?branch=master)](https://travis-ci.org/jaredhuling/jcolors)
 
 `jcolors` contains a selection of `ggplot2` color palettes that I like
 (or can at least tolerate to some degree)
@@ -25,10 +23,10 @@ library(jcolors)
 jcolors('default')
 ```
 
-    ##        kelly_green rich_electric_blue        maximum_red 
-    ##          "#29BF12"          "#00A5CF"          "#DE1A1A" 
-    ##     majorelle_blue fluorescent_orange 
-    ##          "#574AE2"          "#FFBF00"
+    ##        kelly_green rich_electric_blue        maximum_red     majorelle_blue 
+    ##          "#29BF12"          "#00A5CF"          "#DE1A1A"          "#574AE2" 
+    ## fluorescent_orange 
+    ##          "#FFBF00"
 
 ## Display all available palettes
 
@@ -319,8 +317,7 @@ grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_light_
 
 ![](vignettes/readme_figs/jitterplot-1.png)<!-- -->
 
-If the background here were dark, then this would look
-nice:
+If the background here were dark, then this would look nice:
 
 ``` r
 grid.arrange(p1 + scale_color_jcolors_contin("pal3", bias = 1.75) + theme_dark_bg(),

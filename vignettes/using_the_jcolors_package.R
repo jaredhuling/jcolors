@@ -1,20 +1,20 @@
-## ---- eval = FALSE-------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  install.packages("devtools")
 #  devtools::install_github("jaredhuling/jcolors")
 
-## ----eval = TRUE, message = FALSE, warning = FALSE-----------------------
+## ----eval = TRUE, message = FALSE, warning = FALSE----------------------------
 library(jcolors)
 
 jcolors('default')
 
 
-## ----displayall, fig.height = 8------------------------------------------
+## ----displayall, fig.height = 8-----------------------------------------------
 display_all_jcolors()
 
-## ----contin_example_display, fig.height = 8------------------------------
+## ----contin_example_display, fig.height = 8-----------------------------------
 display_all_jcolors_contin()
 
-## ----eval = TRUE, message = FALSE, warning = FALSE-----------------------
+## ----eval = TRUE, message = FALSE, warning = FALSE----------------------------
 library(ggplot2)
 library(gridExtra)
 
@@ -50,10 +50,10 @@ grid.arrange(pltl + scale_color_jcolors(palette = "pal2"),
 
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 display_jcolors("default")
 
-## ----moreplots-----------------------------------------------------------
+## ----moreplots----------------------------------------------------------------
 grid.arrange(pltl + scale_color_jcolors(palette = "pal3"),
              pltd + scale_color_jcolors(palette = "pal3"), ncol = 2)
 
@@ -82,10 +82,10 @@ colour = factor(treatment))) +
 pltd + scale_color_jcolors(palette = "pal6")
 
 
-## ----contin_example, fig.height = 8--------------------------------------
+## ----contin_example, fig.height = 8-------------------------------------------
 display_all_jcolors_contin()
 
-## ----mountain_ex, fig.height=6-------------------------------------------
+## ----mountain_ex, fig.height=6------------------------------------------------
 set.seed(42)
 plt <- ggplot(data.frame(x = rnorm(10000), y = rexp(10000, 1.5)), aes(x = x, y = y)) +
       geom_hex() + coord_fixed() + theme(legend.position = "bottom")

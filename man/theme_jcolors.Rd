@@ -5,14 +5,22 @@
 \alias{theme_light_bg}
 \title{minimal theme for dark backgrounds}
 \usage{
-theme_dark_bg(base_size = 12, base_family = "sans",
-  base_line_size = base_size/22, base_rect_size = base_size/22)
+theme_dark_bg(
+  base_size = 12,
+  base_family = "sans",
+  base_line_size = base_size/22,
+  base_rect_size = base_size/22
+)
 
-theme_light_bg(base_size = 12, base_family = "sans",
-  base_line_size = base_size/22, base_rect_size = base_size/22)
+theme_light_bg(
+  base_size = 12,
+  base_family = "sans",
+  base_line_size = base_size/22,
+  base_rect_size = base_size/22
+)
 }
 \arguments{
-\item{base_size}{base font size}
+\item{base_size}{base font size, given in pts.}
 
 \item{base_family}{base font family}
 
