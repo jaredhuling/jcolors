@@ -2,6 +2,7 @@
 ## New submission for 'jcolors'
 
 * Fixes CRAN check errors induced by new version of ggplot2
+* Fixes broken url
 
 ## Test environments
 
